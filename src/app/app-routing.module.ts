@@ -1,7 +1,40 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
+import { ExploreComponent } from './components/explore/explore.component';
+import { GoalComponent } from './components/goal/goal.component';
+import { Goal1Component } from './components/goal1/goal1.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'signup', component: SignupComponent
+  },
+  {
+    path: 'settings', component: SettingsComponent
+  },
+  {
+    path: 'privacy', component: PrivacyComponent
+  },
+  {
+    path: 'explore', component: ExploreComponent
+  },
+  {
+    path: 'goal', component: GoalComponent
+  },
+  {
+    path: 'homepage', component: HomepageComponent
+  },
+  {
+    path: 'goal1', component: Goal1Component
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
