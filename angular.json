@@ -29,8 +29,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/script.js",
-              "src/app/components/homepage/script.js"
+              "src/assets/script.js",
+              "src/app/components/homepage/script.js",
+              "src/script.js"
             ]
           },
           "configurations": {
@@ -95,8 +96,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/script.js",
-              "src/app/components/homepage/script.js"
+              "src/assets/script.js",
+              "src/app/components/homepage/script.js",
+              "src/script.js"
             ]
           }
         }
