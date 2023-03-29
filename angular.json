@@ -29,9 +29,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/script.js",
-              "src/app/components/homepage/script.js",
-              "src/script.js"
+              "src/assets/Js/script.js"
             ]
           },
           "configurations": {
@@ -95,11 +93,7 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/script.js",
-              "src/app/components/homepage/script.js",
-              "src/script.js"
-            ]
+            "scripts": []
           }
         }
       }
