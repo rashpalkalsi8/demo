@@ -1,4 +1,4 @@
-export function callJSFun(){
+export function myjs(){
   var $carousel = $('.slider');
 
 var settings = {

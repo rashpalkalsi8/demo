@@ -8,6 +8,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { GoalComponent } from './components/goal/goal.component';
 import { Goal1Component } from './components/goal1/goal1.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
   },
   {
     path: 'goal1', component: Goal1Component
+  },
+  {
+    path: 'progress', component: ProgressComponent
   }
 ];
 

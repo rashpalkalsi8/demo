@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {CommonModule} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { Goal1Component } from './components/goal1/goal1.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Goal1Component } from './components/goal1/goal1.component';
     ExploreComponent,
     PrivacyComponent,
     SettingsComponent,
-    Goal1Component
+    Goal1Component,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
