@@ -12,6 +12,9 @@ import { ProgressComponent } from './components/progress/progress.component';
 
 const routes: Routes = [
   {
+    path: '', component: HomepageComponent
+  },
+  {
     path: 'login', component: LoginComponent
   },
   {
