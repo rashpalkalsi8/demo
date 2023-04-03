@@ -4,6 +4,7 @@
     color: white ;
 }
 .mat-toolbar.mat-primary {
+    text-align: center;
     position: absolute;
     background: #c25d85;
     border-radius: 0px 0px 10px 10px;
