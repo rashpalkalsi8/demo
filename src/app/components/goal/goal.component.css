@@ -1,0 +1,10 @@
+.tool-arow {
+    background: none ;
+    border: none ;
+    color: white ;
+}
+.mat-toolbar.mat-primary {
+    position: absolute;
+    background: #c25d85;
+    border-radius: 0px 0px 10px 10px;
+}

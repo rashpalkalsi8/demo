@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-goal',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent {
-
+  @ViewChild('outOfRowBtn',{static: false}) out: any;
+ 
+ 
+ clickButtonOut(){
+   alert(this.out._elementRef.nativeElement.getBoundingClientRect().left)
+ }
 }
