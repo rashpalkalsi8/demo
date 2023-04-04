@@ -23,6 +23,7 @@ import {CommonModule} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { Goal1Component } from './components/goal1/goal1.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { ConnectComponent } from './components/connect/connect.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProgressComponent } from './components/progress/progress.component';
     PrivacyComponent,
     SettingsComponent,
     Goal1Component,
-    ProgressComponent
+    ProgressComponent,
+    ConnectComponent
   ],
   imports: [
     BrowserModule,
