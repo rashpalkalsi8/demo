@@ -1,3 +1,4 @@
+export function myjs(){
 var $carousel = $('.slider');
 
 var settings = {
@@ -27,4 +28,4 @@ setSlideVisibility();
 
 $carousel.on('afterChange', function() {
   setSlideVisibility();
-});
+});}
