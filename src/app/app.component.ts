@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { myjs } from './script';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+
+  ngOnInit(){
+    myjs();
+  }
 }

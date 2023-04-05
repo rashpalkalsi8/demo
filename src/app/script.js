@@ -19,7 +19,7 @@ function setSlideVisibility() {
   });
 
   //Set the opacity of the first and last partial slides.
-  $(visibleSlides).first().prev().css('opacity', 0);
+  $(visibleSlides).first().prev().css('opacity', 1);
 }
 
 $carousel.slick(settings);

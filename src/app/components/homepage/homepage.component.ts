@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { myjs } from 'src/app/script';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -13,4 +13,7 @@ export class HomepageComponent {
 
     return `${value}`;
   }
+ ngOnInit(){
+  myjs();
+ }
 }

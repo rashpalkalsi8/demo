@@ -24,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { Goal1Component } from './components/goal1/goal1.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ConnectComponent } from './components/connect/connect.component';
     MatChipsModule,
     MatIconModule,
     CommonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
