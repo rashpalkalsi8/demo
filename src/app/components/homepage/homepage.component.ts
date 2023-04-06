@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { js } from 'src/assets/Js/script';
 import { ScriptLoaderService } from '../../services/script-loader.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class HomepageComponent {
 
  
  ngOnInit(){
+  js();
   this.scriptLoader.load(
     'assets/Js/script.js');
 

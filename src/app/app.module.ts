@@ -54,7 +54,8 @@ import { ScriptLoaderService } from './services/script-loader.service';
     MatIconModule,
     CommonModule,
     MatToolbarModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    
   ],
   providers: [ScriptLoaderService],
   bootstrap: [AppComponent]
