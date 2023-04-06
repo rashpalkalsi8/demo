@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { myjs } from 'src/app/script';
+
+import { ScriptLoaderService } from '../../services/script-loader.service';
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -13,7 +15,16 @@ export class HomepageComponent {
 
     return `${value}`;
   }
+
+  constructor(private scriptLoader: ScriptLoaderService) {
+    
+  }
+
+ 
  ngOnInit(){
-  myjs();
+  this.scriptLoader.load(
+    'assets/Js/script.js');
+
  }
+
 }

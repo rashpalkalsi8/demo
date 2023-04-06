@@ -25,6 +25,7 @@ import { Goal1Component } from './components/goal1/goal1.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ScriptLoaderService } from './services/script-loader.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     MatToolbarModule,
     SlickCarouselModule
   ],
-  providers: [],
+  providers: [ScriptLoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

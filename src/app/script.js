@@ -1,5 +1,4 @@
-export function myjs(){
-  var $carousel = $('.slider');
+var $carousel = $('.slider');
 
 var settings = {
   dots: false,
@@ -29,4 +28,3 @@ setSlideVisibility();
 $carousel.on('afterChange', function() {
   setSlideVisibility();
 });
-}
