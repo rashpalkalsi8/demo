@@ -26,6 +26,7 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ScriptLoaderService } from './services/script-loader.service';
+import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ScriptLoaderService } from './services/script-loader.service';
     SettingsComponent,
     Goal1Component,
     ProgressComponent,
-    ConnectComponent
+    ConnectComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
