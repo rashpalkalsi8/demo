@@ -1,15 +1,13 @@
-/*.pointer       { cursor: pointer; }
+.pointer       { cursor: pointer; }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-}
+
 mat-slider {
     margin-left: 10%;
     width: 80%;
   }
   .mat-mdc-slider .mdc-slider__track--inactive {
     height: var(--mdc-slider-inactive-track-height, 15px) !important;
-  }*/
+  }
 /*@font-face {
     font-family: 'gilroyextrabold';
     src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
