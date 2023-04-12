@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { js } from 'src/assets/Js/script';
-import { ScriptLoaderService } from '../../services/script-loader.service';
 
+import { ScriptLoaderService } from '../../services/script-loader.service';
+declare function BestSellerSlider(): any;
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -17,15 +17,15 @@ export class HomepageComponent {
   }
 
   constructor(private scriptLoader: ScriptLoaderService) {
-    
+
   }
 
- 
- ngOnInit(){
-  js();
-  this.scriptLoader.load(
-    'assets/Js/script.js');
+  ngOnInit() {
+    this.scriptLoader.load(
+      'assets/Js/script.js');
 
- }
-
+  }
+  tabClick(tab: any) {
+    BestSellerSlider()
+  }
 }

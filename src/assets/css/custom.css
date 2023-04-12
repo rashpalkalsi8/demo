@@ -1,16 +1,8 @@
-/*.pointer       { cursor: pointer; }
-
 body{
     font-family: 'Montserrat', sans-serif;
 }
-mat-slider {
-    margin-left: 10%;
-    width: 80%;
-  }
-  .mat-mdc-slider .mdc-slider__track--inactive {
-    height: var(--mdc-slider-inactive-track-height, 15px) !important;
-  }*/
-/*@font-face {
+
+@font-face {
     font-family: 'gilroyextrabold';
     src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
      url('../fonts/gilroy-extrabold.woff') format('woff');
@@ -41,9 +33,9 @@ mat-slider {
     height: 210px;
     background-attachment: fixed;
     background-position: top;
-}*/
+}
 
-/*.background-white{
+.background-white{
     background-color: #fff;
 
 }
@@ -87,13 +79,13 @@ mat-slider {
 
 .border-radius-10{
     border-radius: 10px;
-}*//*
+}
 .upgrade-plan{
     background: url("../images/upgrade-plan.jpg") no-repeat top left;
     height: 55vh;
-}*/
+}
 
-/*.text-white{
+.text-white{
     color:#fff;
 }
 
@@ -153,10 +145,13 @@ mat-slider {
     margin: 0 auto;
     
   }
-  
+.slider_best_seller {
+  max-width: 2900px;
+  margin: 0 auto;
+} 
   .slick-list {
-      padding-left: 0px!important;*/ /* half partial */
-  /*}
+      padding-left: 0px!important; // half partial
+  }
   
   .cat-box{
    
@@ -196,4 +191,4 @@ mat-slider {
 .btn{
     background-color: #1fc8db;
     background-image: linear-gradient(140deg, #c25d84 0%, #9a5da2 50%, #405de5 75%);
-}*/
+}

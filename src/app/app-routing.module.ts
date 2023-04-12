@@ -10,7 +10,6 @@ import { GoalComponent } from './components/goal/goal.component';
 import { Goal1Component } from './components/goal1/goal1.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
-import { MusicComponent } from './components/music/music.component';
 
 const routes: Routes = [
   {
@@ -45,10 +44,6 @@ const routes: Routes = [
   },
   {
     path: 'connect', component: ConnectComponent
-  },
-
-  {
-    path: 'music', component: MusicComponent
   }
 ];
 

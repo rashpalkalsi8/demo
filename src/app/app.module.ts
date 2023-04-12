@@ -26,7 +26,6 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ScriptLoaderService } from './services/script-loader.service';
-import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +39,7 @@ import { MusicComponent } from './components/music/music.component';
     SettingsComponent,
     Goal1Component,
     ProgressComponent,
-    ConnectComponent,
-    MusicComponent
+    ConnectComponent
   ],
   imports: [
     BrowserModule,
@@ -56,8 +54,7 @@ import { MusicComponent } from './components/music/music.component';
     MatIconModule,
     CommonModule,
     MatToolbarModule,
-    SlickCarouselModule,
-    
+    SlickCarouselModule
   ],
   providers: [ScriptLoaderService],
   bootstrap: [AppComponent]
