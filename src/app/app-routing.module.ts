@@ -11,6 +11,8 @@ import { Goal1Component } from './components/goal1/goal1.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { ConnectComponent } from './components/connect/connect.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
+import { ResourcesComponent } from './components/resources/resources.component';
 
 const routes: Routes = [
   {
@@ -48,6 +50,12 @@ const routes: Routes = [
   },
   {
     path: 'subscription', component: SubscriptionComponent
+  },
+  {
+    path: 'resources', component: ResourcesComponent
+  },
+  {
+    path: 'schedule', component: ScheduleComponent
   }
 ];
 

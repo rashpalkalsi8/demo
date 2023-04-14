@@ -27,6 +27,8 @@ import { ConnectComponent } from './components/connect/connect.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ScriptLoaderService } from './services/script-loader.service';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SubscriptionComponent } from './components/subscription/subscription.co
     Goal1Component,
     ProgressComponent,
     ConnectComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    ResourcesComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
