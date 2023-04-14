@@ -381,3 +381,28 @@
 .wd96{
     width: 96%;
 }
+
+.mat-toolbar.mat-primary {
+  
+    background:var(--pink);
+}
+
+.btn-pink{
+    background-color: #c0004a;
+    border-color:#c0004a;
+    padding: 15px 10px !important;
+    color: #fff;
+}
+
+.border-0{
+    border: 0px;
+}
+.p-left-30{
+    padding-left: 30px;
+}
+.list-group-item.active{
+    background:var(--pink);
+    border-color: var(--pink);
+
+}
+

@@ -1,15 +1,5 @@
-.tool-arow {
-    background: none ;
-    border: none ;
-    color: white ;
-}
-.mat-toolbar.mat-primary {
-    z-index: 999;
-    text-align: center;
-    position: absolute;
-    background: #c25d85;
-    border-radius: 0px 0px 10px 10px;
-}
+
+
 :root {
     --blue: #405de5;
     --white: #ffffff; 
@@ -50,13 +40,7 @@
     font-family: 'gilroyextrabold';
 }
 
-/* .home-banner{
-    background: url("../images/home-banner.jpg") no-repeat top left;
-    background-size: 100%;
-    height: 210px;
-    background-attachment: fixed;
-    background-position: top;
-} */
+
 
 .background-white{
     background:var(--white);
