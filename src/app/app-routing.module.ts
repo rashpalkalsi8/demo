@@ -13,6 +13,7 @@ import { ConnectComponent } from './components/connect/connect.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ResourcesComponent } from './components/resources/resources.component';
+import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,9 @@ const routes: Routes = [
   },
   {
     path: 'schedule', component: ScheduleComponent
+  },
+  {
+    path: 'self-assessment', component: SelfAssessmentComponent
   }
 ];
 

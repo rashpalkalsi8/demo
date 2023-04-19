@@ -29,6 +29,7 @@ import { ScriptLoaderService } from './services/script-loader.service';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
+import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
     ConnectComponent,
     SubscriptionComponent,
     ResourcesComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    SelfAssessmentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,454 @@
+:root {
+    --blue: #405de5;
+    --white: #ffffff; 
+    --pink:#c25d84;
+    --yellow:#fcaf45;
+    --purple:#843ab5;
+    --text-black:#000;
+    --text-gray:#393939;
+    --text-green: #14a34b;
+  }
+  
+  body{ 
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+}
+
+/* @font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
+     url('../fonts/gilroy-extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/gilroy-light.woff2') format('woff2'),
+         url('../fonts/gilroy-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+.font-gilroy-light{
+    font-family: 'gilroylight';
+}
+
+.font-gilroy-bold{
+    font-family: 'gilroyextrabold';
+}
+
+/* .home-banner{
+    background: url("../images/home-banner.jpg") no-repeat top left;
+    background-size: 100%;
+    height: 210px;
+    background-attachment: fixed;
+    background-position: top;
+} */
+
+.background-white{
+    background:var(--white);
+
+}
+
+.user-feel-box
+{
+    margin-top: -40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 20px 25px;
+}
+.font-14{
+    font-size: 14px;
+  }
+  .font-16{
+    font-size: 16px;
+}
+
+.font-24{
+    font-size: 24px;
+}
+
+.font-21{
+    font-size: 21px;
+}
+
+.font-20{
+    font-size: 20px;
+}
+
+.font-12{
+    font-size: 12px;
+}
+
+.font-11{
+    font-size: 11px;
+}
+.font-28{
+    font-size: 28px;
+}
+
+.font-30{
+    font-size:30px;
+}
+
+.font-32{
+    font-size:32px;
+}
+
+.font-40{
+    font-size:40px;
+}
+
+
+
+.font-36{
+    font-size: 24px;
+}
+.letter-spacing-2{
+    letter-spacing: 2px;
+}
+
+.border-radius-50{
+    border-radius: 50px;
+}
+
+.border-radius-10{
+    border-radius: 10px;
+}
+/* .upgrade-plan{
+    background: url("../images/upgrade-plan.jpg") no-repeat top left;
+    height: 55vh;
+} */
+
+.text-white{
+   color:var(--white);
+
+}
+
+.text-pink{
+    color:var(--pink);
+ 
+ }
+.text-gray{
+    color: var(--text-gray);
+}
+
+.text-black{
+    color: var(--text-black);
+}
+.text-green{
+    color: var(--text-green);
+}
+
+.wd-100{
+    width: 100%;
+}
+
+.shadow-lg {
+    box-shadow:0 0rem 1rem rgba(94,94,94,.1)!important;
+}
+
+.bg-pink{
+     background:var(--pink);
+}
+
+.bg-yellow{
+    background:var(--yellow);
+}
+
+.bg-purple{
+    background: var(--purple);
+}
+
+.bg-blue{
+    background:var(--blue);
+}
+
+.bg-white{
+    background:var(--white);
+}
+
+.text-right{
+    text-align: right;
+}
+
+.pl-0{
+    padding-left: 0 ;
+}
+
+
+.tab-bar{
+    background:var(--white);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:0px -3px 12px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+   
+}
+.tab-bar a{
+    color: #cccccc;
+    padding: 1.837rem 0;
+    width: 20%;
+    text-align: center;
+}
+
+.tab-bar a:hover, .tab-bar a:focus, .tab-bar a.active{
+    color:var(--pink);
+}
+
+
+
+.slider {
+    max-width: 2900px;
+    margin: 0 auto;
+    
+  }
+  
+  .slick-list {
+      padding-left: 0px!important; 
+  }
+  
+  .cat-box{
+   
+    height: 145px;
+    padding: 25px 10px 10px 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+
+  .cat-box-1{
+   
+    padding:10px;
+    margin-right:25px;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+
+  .cat-box-2{
+   
+    padding:0px;
+    margin-right:10px;
+    border-radius: 5px;
+    
+
+  }
+ 
+  
+.slick-slide img {
+    display: inline-block;
+
+}
+
+
+.btn-schdule{
+    background-color: #1fc8db;
+    background-image: linear-gradient(140deg, #c25d84 0%, #9a5da2 50%, #405de5 75%);
+}
+
+
+.tool-bar{
+    background-color:var(--pink);
+}
+
+.progress-bar {
+    background-color:var(--pink);  
+}
+
+.textarea-bg{
+    background-image: linear-gradient(140deg, #b76a8b 0%, #aecac8 50%, #a4fbe7 75%);
+    border-radius: 40px;
+    height: 190px;
+    position: relative;
+    box-shadow: 0rem 1rem 1rem rgba(94,94,94,.15);
+}
+
+.textarea-bg textarea{
+    width: 91%;
+    border-radius: 32px;
+    border: 0;
+    margin-top: 8px;
+    padding: 20px 20px 11px 20px;
+    position: relative;
+    z-index: 1;
+    resize: none;
+    box-shadow: 0 0rem 0.5rem rgba(94,94,94,.2);
+    margin-left: 3px;
+    margin-top: 10px;
+   
+}
+
+.textarea-bg::before {
+    content: ".";
+    background-color: var(--white);
+    width: 94%;
+    position: absolute;
+    left: 10px;
+    height: 90%;
+    border-radius:36px;
+    box-shadow: 0 0rem .5rem rgba(94,94,94,.1);
+
+}
+
+.btn-primary{
+    background-color: var(--pink);
+    border-color:var(--pink);
+    padding: 15px 10px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn:first-child:active{
+    background-color: #a03f64;
+    border-color: #a03f64;
+}
+
+.btn-pink{
+    background-color: #c0004a;
+    border-color:#c0004a;
+    padding: 15px 10px !important;
+    color: #fff;
+}
+
+.inp-text{
+    border-bottom: 1px solid #949292;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    color: #5e5e5e;
+    width: 100%;
+    padding: 4px 0;
+}
+
+.inp-text:hover, .inp-text:focus{
+    border-bottom: 1px solid var(--pink);
+    outline: 0;
+}
+
+
+.container-1 {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    padding-top: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--pink);
+    padding-top: 4px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container-1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 33px;
+    width: 33px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid var(--pink);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-1:hover input ~ .checkmark {
+    border-color:var(--pink) ;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container-1 input:checked ~ .checkmark {
+    background-color:var(--pink);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-1 input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-1 .checkmark:after {
+       top: 8px;
+      left: 8px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+  /* .premium-bnr{
+    background: url("../images/upgrade-bnr.jpg") no-repeat top left;
+    height: 25vh;
+    background-size: cover;
+    
+} */
+
+.shadow-sm {
+    box-shadow:0 0rem 1rem rgba(94,94,94,.1)!important;
+}
+
+.shadow-sm-1 {
+    box-shadow:-1px 0px 4px 1px #0003;
+}
+
+.wd96{
+    width: 96%;
+}
+
+.border-0{
+    border: 0px;
+}
+.p-left-30{
+    padding-left: 30px;
+}
+.list-group-item.active{
+    background:var(--pink);
+    border-color: var(--pink);
+
+}
+
+.carousel-item {
+   position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+}
+
+
+
+.carousel-caption{
+    color:var(--white) !important;
+}
+
+.carousel-indicators{
+   
+   bottom: -50px; 
+   
+   
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
