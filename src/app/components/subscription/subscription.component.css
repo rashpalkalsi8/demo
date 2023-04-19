@@ -1,3 +1,15 @@
+.tool-arow {
+    background: none ;
+    border: none ;
+    color: white ;
+}
+.mat-toolbar.mat-primary {
+    z-index: 999;
+    text-align: center;
+
+    background: #c25d85;
+    border-radius: 0px 0px 10px 10px;
+}
 :root {
     --blue: #405de5;
     --white: #ffffff; 
