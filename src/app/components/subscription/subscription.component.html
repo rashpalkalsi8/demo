@@ -47,21 +47,35 @@
 <!--preference box-->  
 
 <div class="container p-3">
-    <h4 class="font-21 mt-5 font-gilroy-bold text-gray ">Select Your Preference:</h4>
+    <h4 class="font-21 mt-5 font-gilroy-bold text-gray mb-3 ">Select Your Preference:</h4>
 
-<div class="list-group ">
-    
+<div class="list-group mb-3 shadow-sm border-0">
     <div  class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-        <label class="container-1 font-gilroy-light">
+        <label class="container-1 font-gilroy-light p-left-30">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h6 class="mb-0">Monthly</h6>
+          <p class="mb-0 opacity-75">$4.99 / per month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-group shadow-sm border-0 ">
+    <div  class="list-group-item list-group-item-action d-flex gap-3 py-3 active" aria-current="true">
+        <label class="container-1 font-gilroy-light p-left-30">
             <input type="radio" name="radio">
             <span class="checkmark"></span>
           </label>
       <div class="d-flex gap-2 w-100 justify-content-between">
         <div>
           <h6 class="mb-0">Yearly (Best Value!):</h6>
-          <p class="mb-0 opacity-75">$49/per month</p>
+          <p class="mb-0 opacity-75">$49 / per month</p>
         </div>
-        <small class="opacity-50 text-nowrap"><button class="btn btn-primary ">Buy Now</button></small>
+        <small class=" text-nowrap"><button class="btn btn-pink ">Buy Now</button></small>
       </div>
     </div>
   </div>
