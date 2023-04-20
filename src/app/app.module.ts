@@ -30,6 +30,7 @@ import { SubscriptionComponent } from './components/subscription/subscription.co
 import { ResourcesComponent } from './components/resources/resources.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
+import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
     SubscriptionComponent,
     ResourcesComponent,
     ScheduleComponent,
-    SelfAssessmentComponent
+    SelfAssessmentComponent,
+    AskACoachComponent
   ],
   imports: [
     BrowserModule,
