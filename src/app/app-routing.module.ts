@@ -14,6 +14,7 @@ import { SubscriptionComponent } from './components/subscription/subscription.co
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
+import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,9 @@ const routes: Routes = [
   },
   {
     path: 'self-assessment', component: SelfAssessmentComponent
+  },
+  {
+    path: 'ask-a-coach', component: AskACoachComponent
   }
 ];
 

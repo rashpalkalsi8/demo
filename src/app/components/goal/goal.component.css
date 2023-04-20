@@ -15,22 +15,13 @@
     background-color: var(--white);
 }
 
-/* @font-face {
-    font-family: 'gilroyextrabold';
-    src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
-     url('../fonts/gilroy-extrabold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+.mat-toolbar.mat-primary {
+    text-align: center;
+    background: #c25d85;
+    border-radius: 0px 0px 10px 10px;
 }
 
-@font-face {
-    font-family: 'gilroylight';
-    src: url('../fonts/gilroy-light.woff2') format('woff2'),
-         url('../fonts/gilroy-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-} */
 
 .font-gilroy-light{
     font-family: 'gilroylight';

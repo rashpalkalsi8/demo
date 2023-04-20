@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { jsn } from 'src/assets/Js/scriptn';
 import { ScriptLoaderService } from '../../services/script-loader.service';
 declare function BestSellerSlider(): any;
 @Component({
@@ -26,6 +26,9 @@ export class HomepageComponent {
 
   }
   tabClick(tab: any) {
-    BestSellerSlider()
+    BestSellerSlider();
+  }
+  Click(){
+    jsn();
   }
 }

@@ -2,8 +2,8 @@
 
 
 mat-slider {
-    margin-left: 10%;
-    width: 80%;
+    margin-left:4%;
+    width: 95%;
   }
   .mat-mdc-slider .mdc-slider__track--inactive {
     height: var(--mdc-slider-inactive-track-height, 15px) !important;
