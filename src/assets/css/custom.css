@@ -1,197 +1,3 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
-@font-face {
-    font-family: 'gilroyextrabold';
-    src: url('../fonts/gilroy-extrabold.woff2') format('woff2'),
-     url('../fonts/gilroy-extrabold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gilroylight';
-    src: url('../fonts/gilroy-light.woff2') format('woff2'),
-         url('../fonts/gilroy-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-.font-gilroy-light{
-    font-family: 'gilroylight';
-}
-
-.font-gilroy-bold{
-    font-family: 'gilroyextrabold';
-}
-
-.home-banner{
-    background: url("../images/home-banner.jpg") no-repeat top left;
-    background-size: 100%;
-    height: 210px;
-    background-attachment: fixed;
-    background-position: top;
-}
-
-.background-white{
-    background-color: #fff;
-
-}
-
-.user-feel-box
-{
-    margin-top: -40px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 20px 25px;
-}
-
-.font-24{
-    font-size: 24px;
-}
-
-.font-22{
-    font-size: 22px;
-}
-
-.font-28{
-    font-size: 28px;
-}
-
-
-.font-16{
-    font-size: 16px;
-}
-
-
-.font-36{
-    font-size: 24px;
-}
-.letter-spacing-2{
-    letter-spacing: 2px;
-}
-
-.border-radius-50{
-    border-radius: 50px;
-}
-
-.border-radius-10{
-    border-radius: 10px;
-}
-.upgrade-plan{
-    background: url("../images/upgrade-plan.jpg") no-repeat top left;
-    height: 55vh;
-}
-
-.text-white{
-    color:#fff;
-}
-
-.wd-100{
-    width: 100%;
-}
-
-.shadow-lg {
-    box-shadow:0 0rem 1rem rgba(94,94,94,.1)!important;
-}
-
-.bg-pink{
-     background: #c25d84;
-}
-
-.bg-yellow{
-    background: #fcaf45;
-}
-
-.bg-purple{
-    background: #843ab5;
-}
-
-.bg-blue{
-    background: #405de5;
-}
-
-.pl-0{
-    padding-left: 0 ;
-}
-
-
-.tab-bar{
-    background: #fff;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow:0px -3px 12px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.1)
-   
-}
-.tab-bar a{
-    color: #cccccc;
-    padding: 1.837rem 0;
-    width: 20%;
-    text-align: center;
-}
-
-.tab-bar a:hover, .tab-bar a:focus, .tab-bar a.active{
-    color:#c36086;
-}
-
-
-
-.slider {
-    max-width: 2900px;
-    margin: 0 auto;
-    
-  }
-.slider_best_seller {
-  max-width: 2900px;
-  margin: 0 auto;
-} 
-  .slick-list {
-      padding-left: 0px!important; /*// half partial */
-  }
-  
-  .cat-box{
-   
-    height: 145px;
-    padding: 25px 10px 10px 10px;
-    margin-right: 20px;
-    border-radius: 5px;
-    text-align: center;
-
-  }
-
-  .cat-box-1{
-   
-    padding:10px;
-    margin-right:25px;
-    border-radius: 5px;
-    text-align: center;
-
-  }
-  .font-14{
-    font-size: 14px;
-  }
-
-  
-.slick-slide img {
-    display: inline-block;
-
-}
-.text-gray{
-    color: #393939;
-}
-
-.text-black{
-    color: #000;
-}
-
-.btn{
-    background-color: #1fc8db;
-    background-image: linear-gradient(140deg, #c25d84 0%, #9a5da2 50%, #405de5 75%);
-}
 :root {
     --blue: #405de5;
     --white: #ffffff; 
@@ -267,7 +73,12 @@ body{
     font-size: 21px;
 }
 
-
+.font-11 {
+    font-size: 11px;
+}
+.font-12 {
+    font-size: 12px;
+}
 
 .font-28{
     font-size: 28px;
@@ -323,6 +134,11 @@ body{
     color: var(--text-black);
 }
 
+
+.text-green{
+    color: var(--text-green);
+}
+
 .wd-100{
     width: 100%;
 }
@@ -373,13 +189,8 @@ body{
 .tab-bar a{
     color: #cccccc;
     padding: 1.837rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    min-width: 50px;
-    text-decoration: none;
+    width: 20%;
+    text-align: center;
 }
 
 .tab-bar a:hover, .tab-bar a:focus, .tab-bar a.active{
@@ -416,6 +227,12 @@ body{
     text-align: center;
 
   }
+
+  .cat-box-2 {
+    padding: 0px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
  
   
 .slick-slide img {
@@ -618,4 +435,20 @@ body{
 
 .mat-mdc-tab-header-pagination-controls-enabled .mat-mdc-tab-header-pagination{
     display: none !important;
+}
+
+.input-box{
+    background:var(--pink);
+    border-color: var(--pink);
+border-radius: 13px;
+color: var(--white);
+}
+
+
+.input-box .text{
+    background-color: transparent;
+    color:var(--white) ;
+    border: 0;
+    outline: 0;
+   
 }
