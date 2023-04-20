@@ -15,6 +15,7 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
+import { BookASessionComponent } from './components/book-a-session/book-a-session.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,9 @@ const routes: Routes = [
   },
   {
     path: 'ask-a-coach', component: AskACoachComponent
+  },
+  {
+    path: 'book-a-session', component: BookASessionComponent
   }
 ];
 
