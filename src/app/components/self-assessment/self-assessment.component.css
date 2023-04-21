@@ -1,3 +1,14 @@
+.pointer       { cursor: pointer; }
+
+
+mat-slider {
+    margin-left:10%;
+    width: 80%;
+  }
+  .mat-mdc-slider .mdc-slider__track--inactive {
+    height: var(--mdc-slider-inactive-track-height, 15px) !important;
+  }
+
 .tool-arow {
     background: none ;
     border: none ;
