@@ -16,6 +16,7 @@ import { ResourcesComponent } from './components/resources/resources.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 import { BookASessionComponent } from './components/book-a-session/book-a-session.component';
+import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
 
 const routes: Routes = [
   {
@@ -68,6 +69,9 @@ const routes: Routes = [
   },
   {
     path: 'book-a-session', component: BookASessionComponent
+  },
+  {
+    path: 'premium-subscription', component: PremiumSubscriptionComponent
   }
 ];
 
