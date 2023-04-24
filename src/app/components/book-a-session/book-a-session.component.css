@@ -1,0 +1,19 @@
+.tool-bar{
+    background-color:var(--pink);
+}
+
+.tool-arow {
+    background: none ;
+    border: none ;
+    color: white ;
+}
+.mat-toolbar.mat-primary {
+    z-index: 999;
+    text-align: center;
+    background: var(--pink);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.mar-left{
+    margin-left: 10px;
+}
