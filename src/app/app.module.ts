@@ -35,7 +35,8 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
 import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 import { BookASessionComponent } from './components/book-a-session/book-a-session.component';
 import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
-import { CalanderComponent } from './components/calander/calander.component';
+import { CalanderComponent } from './components/calendar/calendar.component';
+
 
 @NgModule({
   declarations: [
