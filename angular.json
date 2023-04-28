@@ -27,14 +27,12 @@
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css",
-              // "node_modules/slick-carousel/slick/slick.scss",
-              // "node_modules/slick-carousel/slick/slick-theme.scss"
+              "../node_modules/angular-calendar/css/angular-calendar.css"
+
             ],
             "scripts": [
-              "src/assets/Js/script.js",
-              // "src/script.js",
-              // "node_modules/jquery/dist/jquery.js",
-              // "node_modules/slick-carousel/slick/slick.js"
+              "src/assets/Js/script.js"
+
             ]
           },
           "configurations": {

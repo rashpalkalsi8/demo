@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +35,7 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
 import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 import { BookASessionComponent } from './components/book-a-session/book-a-session.component';
 import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
+import { CalanderComponent } from './components/calander/calander.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,8 @@ import { PremiumSubscriptionComponent } from './components/premium-subscription/
     SelfAssessmentComponent,
     AskACoachComponent,
     BookASessionComponent,
-    PremiumSubscriptionComponent
+    PremiumSubscriptionComponent,
+    CalanderComponent
   ],
   imports: [
     BrowserModule,
@@ -68,9 +72,15 @@ import { PremiumSubscriptionComponent } from './components/premium-subscription/
     MatIconModule,
     CommonModule,
     MatToolbarModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    })
   ],
   providers: [ScriptLoaderService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas :[CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class AppModule { }
