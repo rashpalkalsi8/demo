@@ -37,6 +37,7 @@ import { BookASessionComponent } from './components/book-a-session/book-a-sessio
 import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     MatToolbarModule,
     SlickCarouselModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
