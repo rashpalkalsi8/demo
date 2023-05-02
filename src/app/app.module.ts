@@ -35,7 +35,8 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
 import { AskACoachComponent } from './components/ask-a-coach/ask-a-coach.component';
 import { BookASessionComponent } from './components/book-a-session/book-a-session.component';
 import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
-import { CalanderComponent } from './components/calendar/calendar.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 @NgModule({
@@ -58,7 +59,7 @@ import { CalanderComponent } from './components/calendar/calendar.component';
     AskACoachComponent,
     BookASessionComponent,
     PremiumSubscriptionComponent,
-    CalanderComponent
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +75,7 @@ import { CalanderComponent } from './components/calendar/calendar.component';
     CommonModule,
     MatToolbarModule,
     SlickCarouselModule,
+    MatDatepickerModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
