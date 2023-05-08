@@ -1,0 +1,67 @@
+
+.tool-bar{
+    background-color:var(--pink);
+}
+
+.tool-arow {
+    background: none ;
+    border: none ;
+    color: #fff ;
+}
+.mat-toolbar.mat-primary {
+    z-index: 999;
+    text-align: center;
+    background: var(--pink);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.mar-left{
+    margin-left: 10px;
+}
+
+.ques-box{
+    background: #edceda;
+}
+
+.ev-alarm{
+    background-color: var(--pink);
+    
+
+}
+.font-48{
+    font-size:48px;
+}
+.mdc-evolution-chip__text-label{
+    color: #fff !important;
+}
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled){
+    background-color:var(--pink);
+    color: #fff;
+}
+
+.mat-mdc-standard-chip.mat-primary.mat-mdc-chip-selected {
+    background-color:#fff;
+    border:1px solid var(--pink); 
+}
+
+
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label{
+
+    color:#fff;
+}
+
+.text-light-pink {
+    color: #ff75aa;
+}
+
+.border-1{
+    border-bottom: 1px solid #7c465b;
+}
+
+.mat-mdc-standard-chip.mat-primary.mat-mdc-chip-selected .mat-mdc-chip-graphic{
+    display: none;
+}
+
+
+
+
