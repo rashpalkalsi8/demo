@@ -38,6 +38,7 @@ import { PremiumSubscriptionComponent } from './components/premium-subscription/
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     SlickCarouselModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatButtonModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
