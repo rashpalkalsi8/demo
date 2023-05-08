@@ -39,6 +39,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
+    MatCheckboxModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
