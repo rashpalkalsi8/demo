@@ -41,6 +41,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { Goal2Component } from './components/goal2/goal2.component';
+import { Goal3Component } from './components/goal3/goal3.component';
+import { Goal4Component } from './components/goal4/goal4.component';
+import { Goal5Component } from './components/goal5/goal5.component';
 
 
 @NgModule({
@@ -64,7 +67,10 @@ import { Goal2Component } from './components/goal2/goal2.component';
     BookASessionComponent,
     PremiumSubscriptionComponent,
     CalendarComponent,
-    Goal2Component
+    Goal2Component,
+    Goal3Component,
+    Goal4Component,
+    Goal5Component
   ],
   imports: [
     BrowserModule,

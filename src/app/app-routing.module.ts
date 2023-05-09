@@ -19,6 +19,9 @@ import { BookASessionComponent } from './components/book-a-session/book-a-sessio
 import { PremiumSubscriptionComponent } from './components/premium-subscription/premium-subscription.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { Goal2Component } from './components/goal2/goal2.component';
+import { Goal3Component } from './components/goal3/goal3.component';
+import { Goal4Component } from './components/goal4/goal4.component';
+import { Goal5Component } from './components/goal5/goal5.component';
 
 
 const routes: Routes = [
@@ -81,6 +84,15 @@ const routes: Routes = [
   },
   {
     path: 'goal2', component: Goal2Component
+  },
+  {
+    path: 'goal3', component: Goal3Component
+  },
+  {
+    path: 'goal4', component: Goal4Component
+  },
+  {
+    path: 'goal5', component: Goal5Component
   }
 
 ];
