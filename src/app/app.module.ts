@@ -40,6 +40,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { Goal2Component } from './components/goal2/goal2.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     AskACoachComponent,
     BookASessionComponent,
     PremiumSubscriptionComponent,
-    CalendarComponent
+    CalendarComponent,
+    Goal2Component
   ],
   imports: [
     BrowserModule,
