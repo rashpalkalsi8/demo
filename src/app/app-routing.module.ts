@@ -22,6 +22,8 @@ import { Goal2Component } from './components/goal2/goal2.component';
 import { Goal3Component } from './components/goal3/goal3.component';
 import { Goal4Component } from './components/goal4/goal4.component';
 import { Goal5Component } from './components/goal5/goal5.component';
+import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
+import { Schedule2Component } from './components/schedule2/schedule2.component';
 
 
 const routes: Routes = [
@@ -93,6 +95,12 @@ const routes: Routes = [
   },
   {
     path: 'goal5', component: Goal5Component
+  },
+  {
+    path: 'journal', component: JournalEntryComponent
+  },
+  {
+    path: 'schedule2', component: Schedule2Component
   }
 
 ];

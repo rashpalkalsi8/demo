@@ -44,6 +44,8 @@ import { Goal2Component } from './components/goal2/goal2.component';
 import { Goal3Component } from './components/goal3/goal3.component';
 import { Goal4Component } from './components/goal4/goal4.component';
 import { Goal5Component } from './components/goal5/goal5.component';
+import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
+import { Schedule2Component } from './components/schedule2/schedule2.component';
 
 
 @NgModule({
@@ -70,7 +72,9 @@ import { Goal5Component } from './components/goal5/goal5.component';
     Goal2Component,
     Goal3Component,
     Goal4Component,
-    Goal5Component
+    Goal5Component,
+    JournalEntryComponent,
+    Schedule2Component
   ],
   imports: [
     BrowserModule,
