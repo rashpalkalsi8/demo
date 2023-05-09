@@ -15,6 +15,8 @@
     background-color: var(--white);
 }
 
+
+
 .mat-toolbar.mat-primary {
     text-align: center;
     background: #c25d85;
@@ -346,3 +348,58 @@
       border-radius: 50%;
       background: white;
   }
+
+  .background-yellow{
+    background-color: #fcaf45;
+  }
+
+  
+  .background-white{
+    background-color: #fff;
+  }
+
+  .border-yellow{
+    border-bottom: 2px solid #f6dfd5;
+  }
+
+  .input-text{
+    border: 0;
+  }
+
+  .text-yellow{
+    color: #d6806b;
+  }
+
+
+  .background-white::before{ 
+   
+    background-size:100% !important;
+    content: "";
+    background: url("../../../assets/images/tape.png") no-repeat top left;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: -28px;
+    top: -35px;
+  }
+
+  .background-white::after{
+   
+   
+    background-size:100% !important;
+    content: "";
+    background: url("../../../assets/images/tape.png") no-repeat top left;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    right: -28px;
+    bottom: -35px;
+  }
+
+  .font-44{
+    font-size: 44px;
+  }
+
+ 
+
+
