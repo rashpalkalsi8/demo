@@ -808,3 +808,20 @@
       height: 10px;
       border-radius: 50%;
   }
+
+  .m5{
+    background: url("../../../assets/images/m5.png") no-repeat top left;
+    background-size:100%;
+    height: 220px;
+
+  }
+
+  .input-text{
+    background-color: transparent;
+    border-bottom:1px dashed #fff;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    box-shadow: none;
+    width: 60%;
+  }
