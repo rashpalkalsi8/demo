@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { jsn } from 'src/assets/Js/scriptn';
+import { ScriptLoaderService } from '../../services/script-loader.service';
+
 @Component({
   selector: 'app-resources',
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.css']
 })
 export class ResourcesComponent {
-    constructor(){}
+    constructor( private scriptLoader: ScriptLoaderService ){}
       ngOnInit(){
-    jsn();
+    
+    this.scriptLoader.load(
+      'assets/Js/script.js');
+
+  
   }
 }
