@@ -24,6 +24,7 @@ import { Goal4Component } from './components/goal4/goal4.component';
 import { Goal5Component } from './components/goal5/goal5.component';
 import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
 import { Schedule2Component } from './components/schedule2/schedule2.component';
+import { CommunityComponent } from './components/community/community.component';
 
 
 const routes: Routes = [
@@ -77,6 +78,9 @@ const routes: Routes = [
   },
   {
     path: 'book-a-session', component: BookASessionComponent
+  },
+  {
+    path: 'community', component: CommunityComponent
   },
   {
     path: 'premium-subscription', component: PremiumSubscriptionComponent
