@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { jsn } from 'src/assets/Js/scriptn';
 import { ScriptLoaderService } from '../../services/script-loader.service';
 declare function BestSellerSlider(): any;
+declare function NewestSellerSlider(): any;
+declare function CommingSoonSlider(): any;
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -27,6 +29,8 @@ export class HomepageComponent {
   }
   tabClick(tab: any) {
     BestSellerSlider();
+    NewestSellerSlider();
+    CommingSoonSlider();
   }
   Click(){
     jsn();

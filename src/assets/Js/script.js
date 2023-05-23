@@ -42,3 +42,29 @@ function BestSellerSlider() {
     });
   }
 }
+function NewestSellerSlider() {
+  var $newestSellerSlider = $('.slider_newest_seller');
+  if ($newestSellerSlider.length) {
+    $('.slider_newest_seller').slick({
+      dots: false,
+      arrows: false,
+      slide: '.slick-slideshow__slide_newest',
+      slidesToShow: 2,
+      centerMode: true,
+      centerPadding: '60px',
+    });
+  }
+}
+function CommingSoonSlider() {
+  var $commingSoonSlider = $('.slider_comming_soon');
+  if ($commingSoonSlider.length) {
+    $('.slider_comming_soon').slick({
+      dots: false,
+      arrows: false,
+      slide: '.slick-slideshow__slide_comming_soon',
+      slidesToShow: 2,
+      centerMode: true,
+      centerPadding: '60px',
+    });
+  }
+}
