@@ -79,7 +79,7 @@
 
   <!--Tabs-->
 
-  <mat-tab-group  (selectedTabChange)="tabClick($event)" (keypress)="tabClick($event)">
+  <mat-tab-group  (selectedTabChange)="tabClick($event)" (click)="tabClick($event)">
     <mat-tab label="Popular">
       <div class="slider">
         <div class="slick-slideshow__slide" style="height: 230px; padding-top: 20px;">
