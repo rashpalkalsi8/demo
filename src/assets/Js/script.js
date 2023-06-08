@@ -42,6 +42,19 @@ function BestSellerSlider() {
     });
   }
 }
+function BestSellerSliders() {
+  var $bestSellerSlider = $('.slider_best_sellers');
+  if ($bestSellerSlider.length) {
+    $('.slider_best_sellers').slick({
+      dots: false,
+      arrows: false,
+      slide: '.slick-slideshow__slide_bests',
+      slidesToShow: 2,
+      centerMode: true,
+      centerPadding: '60px',
+    });
+  }
+}
 function NewestSellerSlider() {
   var $newestSellerSlider = $('.slider_newest_seller');
   if ($newestSellerSlider.length) {

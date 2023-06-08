@@ -31,20 +31,20 @@
     <input matSliderThumb>
   </mat-slider><br><br>
   <h1 class="font-28"><strong>For you today!</strong></h1>
-  <mat-tab-group  (selectedTabChange)="tabClick($event)" (click)="tabClick($event)">
+  <mat-tab-group  (selectedTabChange)="tabClicks($event)" (click)="tabClicks($event)">
     <mat-tab label="Goal">
       <img class="img wd-100 pointer mt-4" src="./assets/images/m1.png" routerLink="/goal">
 
     </mat-tab>
     <mat-tab label="Resources">
-      <div class=" container bg-white shadow-sm wd96 mt-5">
+
     
-        <div class="row">
-          <h2 class="font-gilroy-bold font-20 pt-2">Most Popular</h2>
-            <div class="slider " style="height: 200px;">
-       <div class="slick-slideshow__slide" style="margin-left:-3px; " >
+        
+
+            <div class="slider_best_sellers " style="height: 230px; padding-top: 20px;">
+       <div class="slick-slideshow__slide_bests pointer" style="height: 230px; padding-top: 20px;" >
         <div class="cat-box-2 background-white mb-2 shadow-sm-1" >         
-          <img  class="wd-100" src="./assets/images/r-1.jpg">
+          <img  class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
           <div class="p-2">
             <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
             <div class="font-11 text-green">36 Min Delivery</div>
@@ -54,9 +54,9 @@
         </div>
      
        </div>
-       <div class="slick-slideshow__slide col-3" >
+       <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
          <div class="cat-box-2 background-white shadow-sm-1"  >         
-           <img class="wd-100"  src="./assets/images/r-1.jpg">
+           <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
            <div class="p-2">
             <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
             <div class="font-11 text-green">36 Min Delivery</div>
@@ -65,9 +65,9 @@
           </div>
          </div>
        </div>
-       <div class="slick-slideshow__slide col-3" >
+       <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;" >
         <div class="cat-box-2 background-white shadow-sm-1" >         
-          <img class="wd-100"  src="./assets/images/r-1.jpg">
+          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
           <div class="p-2">
            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
            <div class="font-11 text-green">36 Min Delivery</div>
@@ -76,9 +76,9 @@
          </div>
         </div>
       </div>
-      <div class="slick-slideshow__slide col-3"  style="height: 200px;">
+      <div class="slick-slideshow__slide_bests pointer "  style="height: 230px; padding-top: 20px;">
         <div class="cat-box-2 background-white shadow-sm-1" >         
-          <img class="wd-100"  src="./assets/images/r-1.jpg">
+          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
           <div class="p-2">
            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
            <div class="font-11 text-green">36 Min Delivery</div>
@@ -87,9 +87,9 @@
          </div>
         </div>
       </div>
-      <div class="slick-slideshow__slide col-3"style="height: 200px;" >
+      <div class="slick-slideshow__slide_bests pointer "style="height: 230px; padding-top: 20px;" >
         <div class="cat-box-2 background-white shadow-sm-1"  >         
-          <img class="wd-100"  src="./assets/images/r-1.jpg">
+          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
           <div class="p-2">
            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
            <div class="font-11 text-green">36 Min Delivery</div>
@@ -98,9 +98,9 @@
          </div>
         </div>
       </div>
-      <div class="slick-slideshow__slide col-3" style="height: 200px;">
+      <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
         <div class="cat-box-2 background-white shadow-sm-1"  >         
-          <img class="wd-100"  src="./assets/images/r-1.jpg">
+          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
           <div class="p-2">
            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
            <div class="font-11 text-green">36 Min Delivery</div>
@@ -111,8 +111,7 @@
       </div>
      </div>
                
-             </div>
-      </div>
+
 
 
     </mat-tab>

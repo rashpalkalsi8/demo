@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { jsn } from 'src/assets/Js/scriptn';
 import { ScriptLoaderService } from '../../services/script-loader.service';
 declare function BestSellerSlider(): any;
+declare function BestSellerSliders(): any;
 declare function NewestSellerSlider(): any;
 declare function CommingSoonSlider(): any;
 @Component({
@@ -29,6 +30,11 @@ export class HomepageComponent {
   }
   tabClick(tab: any) {
     BestSellerSlider();
+    NewestSellerSlider();
+    CommingSoonSlider();
+  }
+  tabClicks(tab: any) {
+    BestSellerSliders();
     NewestSellerSlider();
     CommingSoonSlider();
   }
