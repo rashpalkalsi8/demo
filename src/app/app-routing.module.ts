@@ -25,6 +25,7 @@ import { Goal5Component } from './components/goal5/goal5.component';
 import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
 import { Schedule2Component } from './components/schedule2/schedule2.component';
 import { CommunityComponent } from './components/community/community.component';
+import { Connect2Component } from './components/connect2/connect2.component';
 
 
 const routes: Routes = [
@@ -105,6 +106,9 @@ const routes: Routes = [
   },
   {
     path: 'schedule2', component: Schedule2Component
+  },
+  {
+    path: 'connect2', component: Connect2Component
   }
 
 ];
