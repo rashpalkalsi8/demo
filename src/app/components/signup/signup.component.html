@@ -11,17 +11,17 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
                             <div class="panel-body p-3">
-                            <form action="connect1.php" method="post" [formGroup]= "signupForm" >
+                            <form action="connect1.php" method="post" [formGroup]= "signupForm" (ngSubmit)="signUp()" >
                                 <div class="form-group pt-3">
-                                    <span class="error" *ngIf= 'fname!.invalid && fname!.touched'>*Required</span>
+                                    <span class="error" *ngIf= 'firstName!.invalid && firstName!.touched'>*Required</span>
                                     <div id="fn" class="input-field">
-                                    <input type="text" formControlName= "fname" class="{'is-invalid'}" placeholder="FirstName" name="firstname">
+                                    <input type="text" formControlName= "firstName" class="{'is-invalid'}" placeholder="FirstName" name="firstname">
                                     </div>
                                 </div>
                                 <div class="form-group pt-3">
                                     <div id="ln" class="input-field">
                                     
-                                    <input type="text" formControlName= "lname" placeholder="LastName" name="lastname">
+                                    <input type="text" formControlName= "lastName" placeholder="LastName" name="lastname">
                                     </div>
                                 </div>
                                 <div class="form-group pt-3">
@@ -32,17 +32,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group pt-3">
-                                    <span class="error" *ngIf= 'usr!.invalid && usr!.touched'>*Required</span>
+                                    <span class="error" *ngIf= 'userName!.invalid && userName!.touched'>*Required</span>
                                     <div class="input-field">
                                     <span class="fa fa-user p-2"></span> 
-                                    <input type="text" formControlName= "usr" class="{'is-invalid'}" placeholder="Username" name="user">
+                                    <input type="text" formControlName= "userName" class="{'is-invalid'}" placeholder="Username" name="user">
                                     </div>
                                 </div>
                                 <div class="form-group pt-3">
-                                    <span class="error" *ngIf= 'pwd!.invalid && pwd!.touched'>*Required</span> 
+                                    <span class="error" *ngIf= 'password!.invalid && password!.touched'>*Required</span> 
                                     <div class="input-field">
                                      <span class="fa fa-lock p-2"></span>
-                                     <input [type]="type" formControlName= "pwd" class="{'is-invalid'}" placeholder="Password" name="password">
+                                     <input [type]="type" formControlName= "password" class="{'is-invalid'}" placeholder="Password" name="password">
                                      <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
                                      </div>
                                 </div>

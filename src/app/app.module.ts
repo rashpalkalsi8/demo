@@ -48,6 +48,7 @@ import { JournalEntryComponent } from './components/journal-entry/journal-entry.
 import { Schedule2Component } from './components/schedule2/schedule2.component';
 import { CommunityComponent } from './components/community/community.component';
 import { Connect2Component } from './components/connect2/connect2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -98,6 +99,7 @@ import { Connect2Component } from './components/connect2/connect2.component';
     MatNativeDateModule,
     MatButtonModule,
     MatCheckboxModule,
+    HttpClientModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

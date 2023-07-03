@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {FormControl,FormGroup,Validators} from '@angular/forms';
+import {FormControl,FormGroup,Validators,FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,23 +9,34 @@ import {FormControl,FormGroup,Validators} from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  constructor() { }
+
+  // public signupForms !: FormBuilder;
+
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
 
   ngOnInit(): void {
+
+    // this.signupForms = this.formBuilder.group({
+    //   firstName:[''],
+    //   lastName:[''],
+    //   userName:[''],
+    //   email:[''],
+    //   password:['']
+    // })
   }
 
   signupForm = new FormGroup({
-    fname: new FormControl('',Validators.required),
-    lname: new FormControl(''),
-    usr: new FormControl('',Validators.required),
+    firstName: new FormControl('',Validators.required),
+    lastName: new FormControl(''),
+    userName: new FormControl('',Validators.required),
     email: new FormControl('',Validators.required),
-    pwd: new FormControl('',Validators.required)
+    password: new FormControl('',Validators.required)
   })
 
-  get fname(){return this.signupForm.get ('fname')}
+  get firstName(){return this.signupForm.get ('firstName')}
   get email(){return this.signupForm.get ('email')}
-  get usr(){return this.signupForm.get ('usr')}
-  get pwd(){return this.signupForm.get ('pwd')}
+  get userName(){return this.signupForm.get ('userName')}
+  get password(){return this.signupForm.get ('password')}
 
   type: string = "password";
   isText: boolean = false;
@@ -33,5 +46,15 @@ export class SignupComponent {
     this.isText = !this.isText;
     this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-eye-slash";
     this.isText ? this.type = "text" : this.type = "password";
+  }
+
+  signUp(){
+    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signup", this.signupForm.value)
+    .subscribe(res=>{
+      alert("Signup Successfull");
+      this.router.navigate(['login']);
+    },err=>{
+    alert("Something went wrong");
+  })
   }
 }
