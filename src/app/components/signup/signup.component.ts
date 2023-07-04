@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  signupForms!: FormGroup<{ firstName: FormControl<string | null>; lastName: FormControl<string | null>; userName: FormControl<string | null>; email: FormControl<string | null>; password: FormControl<string | null>; signUpChannel: FormControl<string | null>; }>;
 
   // public signupForms !: FormBuilder;
 
@@ -16,13 +17,15 @@ export class SignupComponent {
 
   ngOnInit(): void {
 
-    // this.signupForms = this.formBuilder.group({
-    //   firstName:[''],
-    //   lastName:[''],
-    //   userName:[''],
-    //   email:[''],
-    //   password:['']
-    // })
+    this.signupForms = this.formBuilder.group({
+      firstName:[''],
+      lastName:[''],
+      userName:[''],
+      email:[''],
+      password:[''],
+      signUpChannel:['EML']
+
+    })
   }
 
   signupForm = new FormGroup({
@@ -30,13 +33,15 @@ export class SignupComponent {
     lastName: new FormControl(''),
     userName: new FormControl('',Validators.required),
     email: new FormControl('',Validators.required),
-    password: new FormControl('',Validators.required)
+    password: new FormControl('',Validators.required),
+    signUpChannel: new FormControl('',Validators.required)
   })
 
   get firstName(){return this.signupForm.get ('firstName')}
   get email(){return this.signupForm.get ('email')}
   get userName(){return this.signupForm.get ('userName')}
   get password(){return this.signupForm.get ('password')}
+  get signUpChannel(){return this.signupForm.get ('EML')}
 
   type: string = "password";
   isText: boolean = false;

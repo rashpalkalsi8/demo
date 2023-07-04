@@ -32,6 +32,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group pt-3">
+                                   <div class="input-field">
+                                    <span class="fa fa-envelope p-2"></span> 
+                                   <input type="text" formControlName= "signUpChannel" class="{'is-invalid'}" placeholder="EML" name="signUpChannel">
+                                    </div>
+                                </div>
+                                <div class="form-group pt-3">
                                     <span class="error" *ngIf= 'userName!.invalid && userName!.touched'>*Required</span>
                                     <div class="input-field">
                                     <span class="fa fa-user p-2"></span> 
