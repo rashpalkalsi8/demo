@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup,Validators,FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +12,8 @@ import { Router } from '@angular/router';
 export class SignupComponent {
   signupForms!: FormGroup<{ firstName: FormControl<string | null>; lastName: FormControl<string | null>; userName: FormControl<string | null>; email: FormControl<string | null>; password: FormControl<string | null>; signUpChannel: FormControl<string | null>; }>;
   UserDataService: any;
+  URL = 'https://digitalstories.co.in/api/v1/customers/signup';
+  
 
   // public signupForms !: FormBuilder;
 
@@ -19,7 +22,7 @@ export class SignupComponent {
    }
 
   ngOnInit(): void {
-
+        
     this.signupForms = this.formBuilder.group({
       firstName:[''],
       lastName:[''],
@@ -64,5 +67,12 @@ export class SignupComponent {
     },err=>{
     alert("Something went wrong");
   })
+  let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let head_obj = new HttpHeaders().set("x-api-key",token)
+    return this.http.get(this.URL,{headers : head_obj})
   }
 }
+function intercept(req: any, arg1: any, next: any, HttpHandler: any) {
+  throw new Error('Function not implemented.');
+}
+
