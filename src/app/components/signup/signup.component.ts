@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup,Validators,FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,10 +10,13 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent {
   signupForms!: FormGroup<{ firstName: FormControl<string | null>; lastName: FormControl<string | null>; userName: FormControl<string | null>; email: FormControl<string | null>; password: FormControl<string | null>; signUpChannel: FormControl<string | null>; }>;
+  UserDataService: any;
 
   // public signupForms !: FormBuilder;
 
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) {
+    //  this.service.users();
+   }
 
   ngOnInit(): void {
 

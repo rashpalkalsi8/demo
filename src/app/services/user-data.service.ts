@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserDataService {
-
+ 
   header = new HttpHeaders({
     'x-api-host': 'digitalstories.co.in',
     'x-api-key': 'f094fdf9-5718-4858-aa72-64136530c582'
@@ -14,6 +14,8 @@ export class UserDataService {
   constructor(private http: HttpClient) { }
   users()
   {
-    return this.http.get(this.url,{headers : this.header})
+    let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let head_obj = new HttpHeaders().set("Authorization","bearer "+token)
+    return this.http.get(this.url,{headers : head_obj})
   }
 }
