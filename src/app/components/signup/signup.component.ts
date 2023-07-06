@@ -60,16 +60,23 @@ export class SignupComponent {
   }
 
   signUp(){
-    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signup", this.signupForm.value)
+   console.log('checking ', this.signupForm.value);
+   let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+   const headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'x-api-key': token
+  });
+  
+    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signup", this.signupForm.value, {headers})
     .subscribe(res=>{
       alert("Signup Successfull");
       this.router.navigate(['login']);
     },err=>{
     alert("Something went wrong");
   })
-  let token = 'f094fdf9-5718-4858-aa72-64136530c582';
-    let head_obj = new HttpHeaders().set("x-api-key",token)
-    return this.http.get(this.URL,{headers : head_obj})
+  // let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+    // let head_obj = new HttpHeaders().set("x-api-key",token)
+    // return this.http.get(this.URL,{headers : head_obj})
   }
 }
 function intercept(req: any, arg1: any, next: any, HttpHandler: any) {
