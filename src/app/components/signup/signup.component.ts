@@ -72,14 +72,14 @@ export class SignupComponent {
       alert("Signup Successfull");
       this.router.navigate(['login']);
     },err=>{
-    alert("Something went wrong");
+    alert("Username/Email already exist");
   })
   // let token = 'f094fdf9-5718-4858-aa72-64136530c582';
     // let head_obj = new HttpHeaders().set("x-api-key",token)
     // return this.http.get(this.URL,{headers : head_obj})
   }
 }
-function intercept(req: any, arg1: any, next: any, HttpHandler: any) {
-  throw new Error('Function not implemented.');
-}
+// function intercept(req: any, arg1: any, next: any, HttpHandler: any) {
+//   throw new Error('Function not implemented.');
+// }
 
