@@ -30,7 +30,7 @@ import { Connect2Component } from './components/connect2/connect2.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomepageComponent
+    path: '', component: LoginComponent
   },
   {
     path: 'login', component: LoginComponent
@@ -51,7 +51,7 @@ const routes: Routes = [
     path: 'goal', component: GoalComponent
   },
   {
-    path: 'homepage', component: HomepageComponent
+    path: 'home', component: HomepageComponent
   },
   {
     path: 'goal1', component: Goal1Component

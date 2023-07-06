@@ -39,7 +39,7 @@ export class LoginComponent  implements OnInit {
    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signin", this.loginForm.value, {headers})
    .subscribe(res=>{
      alert("Login Successfull");
-     this.router.navigate(['']);
+     this.router.navigate(['home']);
    },err=>{
    alert("Please check Username/Password");
  })
