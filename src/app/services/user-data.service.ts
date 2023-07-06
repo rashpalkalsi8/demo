@@ -1,5 +1,6 @@
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,9 @@ export class UserDataService {
     let token = 'f094fdf9-5718-4858-aa72-64136530c582';
     let head_obj = new HttpHeaders().set("Authorization","bearer "+token)
     return this.http.get(this.url,{headers : head_obj})
+  }
+
+  login(data: any):Observable<any>{
+    return this.http.post('https://digitalstories.co.in/api/v1/customers/signin',data);
   }
 }

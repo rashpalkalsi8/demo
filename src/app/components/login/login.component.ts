@@ -1,6 +1,9 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,24 +12,51 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent  implements OnInit {
   
+  loginForms!: FormGroup<{  userName: FormControl<string | null>; email: FormControl<string | null>; password: FormControl<string | null>; signUpChannel: FormControl<string | null>; }>;
+
 
   user: any;
-  password: any;
+  password1: any;
+
+
+
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) {
+    //  this.service.users();
+   }
 
   ngOnInit(): void {
   }  
 
-dologin(): void {
-  console.log(this.loginForm.value);
-}
+
+  dologin(){
+    console.log(this.loginForm.value);
+    let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+    const headers = new HttpHeaders({
+     'Content-Type': 'application/json',
+     'x-api-key': token
+   });
+   
+   this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signin", this.loginForm.value, {headers})
+   .subscribe(res=>{
+     alert("Login Successfull");
+     this.router.navigate(['']);
+   },err=>{
+   alert("Please check Username/Password");
+ })
+  }
 
 loginForm = new FormGroup({
-  lusr: new FormControl('',Validators.required),
-  lpwd: new FormControl('',Validators.required)
+  userName: new FormControl('',Validators.required),
+  password: new FormControl('',Validators.required),
+  signInChannel: new FormControl('EML'),
+  email: new FormControl('',Validators.required),
+
 })
 
-get lusr(){return this.loginForm.get ('lusr')}
-get lpwd(){return this.loginForm.get ('lpwd')}
+get userName(){return this.loginForm.get ('userName')}
+get password(){return this.loginForm.get ('password')}
+get signInChannel(){return this.loginForm.get ('EML')}
+get email(){return this.loginForm.get ('email')}
 
 type: string = "password";
 isText: boolean = false;
