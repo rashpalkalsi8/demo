@@ -30,14 +30,15 @@ export class LoginComponent  implements OnInit {
 
   dologin(){
     console.log(this.loginForm.value);
-    let token = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let token1 = 'f094fdf9-5718-4858-aa72-64136530c582';
     const headers = new HttpHeaders({
      'Content-Type': 'application/json',
-     'x-api-key': token
+     'x-api-key': token1
    });
    
    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signin", this.loginForm.value, {headers})
-   .subscribe(res=>{
+   .subscribe((res:any)=>{
+    localStorage.setItem("customerToken", res.customerToken);
      alert("Login Successfull");
      this.router.navigate(['home']);
    },err=>{
