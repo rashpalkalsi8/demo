@@ -4,7 +4,8 @@ import { ScriptLoaderService } from '../../services/script-loader.service';
 import { BehaviorSubject } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { UserDataService } from 'src/app/services/user-data.service';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import startOfISOWeek from 'date-fns/startOfISOWeek';
 
 declare function BestSellerSlider(): any;
 declare function BestSellerSliders(): any;
@@ -28,7 +29,7 @@ export class HomepageComponent {
   private userPayload:any;
   public fullName: string = "";
 
-  constructor(private scriptLoader: ScriptLoaderService, private http : HttpHeaders) {
+  constructor(private scriptLoader: ScriptLoaderService, private httpclient : HttpClient) {
     
     this.userPayload = this.decodeToken();
 
@@ -53,27 +54,14 @@ export class HomepageComponent {
       this.getFullName()
       .subscribe(val=>{
         let fullNameFromToken = this.getFullNameFromToken();
-        this.fullName = val || fullNameFromToken
+        return this.fullName = val || fullNameFromToken
       })
 
   }
 
-
-  // dologin(){
-  //   console.log(this.loginForm.value);
-  //   let token1 = 'f094fdf9-5718-4858-aa72-64136530c582';
-  //   const headers = new HttpHeaders({
-  //    'Content-Type': 'application/json',
-  //    'x-api-key': token1
-  //  });
-   
-  //  this.http.post<any>("https://digitalstories.co.in/api/v1/customers/", this.loginForm.value, {headers})
-  //  .subscribe((res:any)=>{
-  //   localStorage.setItem("customerToken", res.customerToken);
-  //    alert("Login Successfull");
-     
-  //  })
-  // }
+emotion(){
+  return this.httpclient.get("https://digitalstories.co.in/api/v1/emotions");
+}
   
 
   tabClick(tab: any) {
@@ -90,16 +78,23 @@ export class HomepageComponent {
     jsn();
   }
 
-  storeToken(tokenValue: string){
+  storeToken(tokenValue: string, customerID: string){
     localStorage.setItem('customerToken', tokenValue)
+    localStorage.setItem("customerID", customerID)
   }
 
   getToken(){
     return localStorage.getItem('customerToken')
   }
+  getId(){
+    return localStorage.getItem('customerID')
+  }
 
   isLoggedIn(): boolean{
     return !!localStorage.getItem('customerToken')
+  }
+  isLoggedIn1(): boolean{
+    return !!localStorage.getItem('customerID')
   }
 
   decodeToken(){
@@ -110,7 +105,23 @@ export class HomepageComponent {
 
   getFullNameFromToken(){
     if (this.userPayload)
-    return this.userPayload.firstName;
+    return this.userPayload.userName;
+  }
+
+  dologin1(){
+   
+    let token1 = this.getToken()!;
+    let id = this.getId()!;
+    const headers = new HttpHeaders({
+     'Content-Type': 'application/json',
+     'x-api-key': id,
+     'x-user-token': token1
+   });
+   
+   this.httpclient.get<any>("https://digitalstories.co.in/api/v1/customers", {headers})
+   .subscribe((res:any)=>{
+    return this.userPayload.userName;
+   })
   }
 
 }

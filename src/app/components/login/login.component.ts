@@ -21,10 +21,15 @@ export class LoginComponent  implements OnInit {
 
 
   constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) {
-    //  this.service.users();
+    
    }
 
   ngOnInit(): void {
+    // this._authService.user.subscribe((res: any)=>{
+    //   if(res){
+    //     this.router.navigate(['/home'])
+    //   }
+    // })
   }  
 
 
@@ -39,8 +44,9 @@ export class LoginComponent  implements OnInit {
    this.http.post<any>("https://digitalstories.co.in/api/v1/customers/signin", this.loginForm.value, {headers})
    .subscribe((res:any)=>{
     localStorage.setItem("customerToken", res.customerToken);
+    localStorage.setItem("customerID", res.customerID);
      alert("Login Successfull");
-     this.router.navigate(['home']);
+     this.router.navigate(['/home']);
    },err=>{
    alert("Please check Username/Password");
  })
