@@ -27,7 +27,7 @@ export class HomepageComponent {
 
   private FullName$ = new BehaviorSubject<string>("");
   private userPayload:any;
-  public fullName: string = "";
+  public fullName: any;
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient : HttpClient) {
     
@@ -51,11 +51,19 @@ export class HomepageComponent {
     this.scriptLoader.load(
       'assets/Js/script.js');
 
-      this.getFullName()
-      .subscribe(val=>{
-        let fullNameFromToken = this.getFullNameFromToken();
-        return this.fullName = val || fullNameFromToken
-      })
+      this.dologin1()
+      let token1 = this.getToken()!;
+    let id = this.getId()!;
+    const headers = new HttpHeaders({
+     'Content-Type': 'application/json',
+     'x-api-key': 'f094fdf9-5718-4858-aa72-64136530c582',
+     'x-user-token': token1
+   });
+   let url = "https://digitalstories.co.in/api/v1/customers/"+id
+      this.httpclient.get<any>(url, {headers})
+      .subscribe((res:any)=>{
+        return this.fullName = res.firstName;
+       })
 
 
   }
