@@ -57,6 +57,7 @@ export class HomepageComponent {
         return this.fullName = val || fullNameFromToken
       })
 
+
   }
 
 emotion(){
@@ -105,7 +106,7 @@ emotion(){
 
   getFullNameFromToken(){
     if (this.userPayload)
-    return this.userPayload.userName;
+    return this.userPayload.firstName;
   }
 
   dologin1(){
@@ -114,13 +115,14 @@ emotion(){
     let id = this.getId()!;
     const headers = new HttpHeaders({
      'Content-Type': 'application/json',
-     'x-api-key': id,
+     'x-api-key': 'f094fdf9-5718-4858-aa72-64136530c582',
      'x-user-token': token1
    });
-   
-   this.httpclient.get<any>("https://digitalstories.co.in/api/v1/customers", {headers})
+   let url = "https://digitalstories.co.in/api/v1/customers/"+id
+   this.httpclient.get<any>(url, {headers})
    .subscribe((res:any)=>{
-    return this.userPayload.userName;
+    console.log('checking ', res.firstName);
+    return res.firstName;
    })
   }
 
