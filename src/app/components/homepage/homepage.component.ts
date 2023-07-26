@@ -105,18 +105,17 @@ emotion(){
   }
 
   dologin1(){
-   
+    let api = 'f094fdf9-5718-4858-aa72-64136530c582';
     let token1 = this.getToken()!;
     let id = this.getId()!;
     const headers = new HttpHeaders({
      'Content-Type': 'application/json',
-     'x-api-key': 'f094fdf9-5718-4858-aa72-64136530c582',
+     'x-api-key': api,
      'x-user-token': token1
    });
    let url = "https://digitalstories.co.in/api/v1/customers/"+id
    this.httpclient.get<any>(url, {headers})
    .subscribe((res:any)=>{
-    console.log('checking ', res.firstName);
     return this.fullName = res.firstName;
    })
   }
