@@ -66,7 +66,8 @@ export class HomepageComponent {
   public fullName: any;
   public code: any;
   public description: any;
-  public id1:any = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
+  public id1: any = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
+  public emotionresult: any;
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient : HttpClient) {
     
@@ -163,10 +164,11 @@ export class HomepageComponent {
      'x-api-key': api,
      'media-files': 'audio',
    });
-   let url = "https://digitalstories.co.in/api/v1/emotions/"+eid;
+   let url = "https://digitalstories.co.in/api/v1/emotions/"+eid+"/media-files";
    this.httpclient.get<any>(url, {headers})
    .subscribe((res: any)=>{
-    console.log('checking ', res); 
+    console.log('checking ', res[0].mediaFileUrl); 
+    return this.emotionresult = res[0].mediaFileUrl ;
    })
   }
 
