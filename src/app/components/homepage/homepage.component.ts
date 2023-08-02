@@ -21,39 +21,39 @@ export class HomepageComponent {
     if (value <= 0 || value <= 1) {
        this.description = 'angry';
       this.code = value;
-      this.id = 'E0DAD613-FB13-EE11-9F1B-80B136B022C7';
+       this.id1 = 'E0DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id;
+      return this.code + this.description + this.id1;
     }
    else if (value <= 2 || value <= 3) {
       this.description = 'sad';
       
-      this.id = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
-      return this.code + this.description + this.id;
+      this.id1 = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id1;
     }
    else if (value <= 4 || value<=5) {
       this.description = 'normal';
       
-      this.id = 'E2DAD613-FB13-EE11-9F1B-80B136B022C7';
-      return this.code + this.description + this.id;
+      this.id1 = 'E2DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id1;
     }
     else if (value <= 6 || value<=7) {
       this.description = 'better';
       
-      this.id = 'E3DAD613-FB13-EE11-9F1B-80B136B022C7';
-      return this.code + this.description + this.id;
+      this.id1 = 'E3DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id1;
     }
    else if (value <= 8 || value<=9) {
       this.description = 'happy';
       
-      this.id = 'E4DAD613-FB13-EE11-9F1B-80B136B022C7';
-      return this.code + this.description + this.id;
+      this.id1 = 'E4DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id1;
     }
   else  if (value <= 10) {
       this.description = 'best';
       
-      this.id = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
-      return this.code + this.description + this.id;
+      this.id1 = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id1;
     }
 
     this.emotions()   
@@ -66,7 +66,7 @@ export class HomepageComponent {
   public fullName: any;
   public code: any;
   public description: any;
-  public id: any;
+  public id1:any = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient : HttpClient) {
     
@@ -157,11 +157,13 @@ export class HomepageComponent {
 
   emotions(){
     let api = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let eid = this.id1;
     const headers = new HttpHeaders({
      'Content-Type': 'application/json',
      'x-api-key': api,
+     'media-files': 'audio',
    });
-   let url = "https://digitalstories.co.in/api/v1/emotions/" + this.id;
+   let url = "https://digitalstories.co.in/api/v1/emotions/"+eid;
    this.httpclient.get<any>(url, {headers})
    .subscribe((res: any)=>{
     console.log('checking ', res); 
