@@ -18,9 +18,45 @@ declare function CommingSoonSlider(): any;
 })
 export class HomepageComponent {
   formatLabel(value: number): string {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
+    if (value <= 0 || value <= 1) {
+       this.description = 'angry';
+      this.code = value;
+      this.id = 'E0DAD613-FB13-EE11-9F1B-80B136B022C7';
+
+      return this.code + this.description + this.id;
     }
+   else if (value <= 2 || value <= 3) {
+      this.description = 'sad';
+      
+      this.id = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id;
+    }
+   else if (value <= 4 || value<=5) {
+      this.description = 'normal';
+      
+      this.id = 'E2DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id;
+    }
+    else if (value <= 6 || value<=7) {
+      this.description = 'better';
+      
+      this.id = 'E3DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id;
+    }
+   else if (value <= 8 || value<=9) {
+      this.description = 'happy';
+      
+      this.id = 'E4DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id;
+    }
+  else  if (value <= 10) {
+      this.description = 'best';
+      
+      this.id = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
+      return this.code + this.description + this.id;
+    }
+
+    this.emotions()   
 
     return `${value}`;
   }
@@ -28,6 +64,9 @@ export class HomepageComponent {
   private FullName$ = new BehaviorSubject<string>("");
   private userPayload:any;
   public fullName: any;
+  public code: any;
+  public description: any;
+  public id: any;
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient : HttpClient) {
     
@@ -43,21 +82,17 @@ export class HomepageComponent {
     this.FullName$.next(fullname);
   }
 
-  // getdata(){
-  //     let url='';
-  // }
+
 
   ngOnInit() {
     this.scriptLoader.load(
       'assets/Js/script.js');
 
       this.dologin1()
+      this.emotions()
 
   }
 
-emotion(){
-  return this.httpclient.get("https://digitalstories.co.in/api/v1/emotions");
-}
   
 
   tabClick(tab: any) {
@@ -117,6 +152,19 @@ emotion(){
    this.httpclient.get<any>(url, {headers})
    .subscribe((res:any)=>{
     return this.fullName = res.firstName;
+   })
+  }
+
+  emotions(){
+    let api = 'f094fdf9-5718-4858-aa72-64136530c582';
+    const headers = new HttpHeaders({
+     'Content-Type': 'application/json',
+     'x-api-key': api,
+   });
+   let url = "https://digitalstories.co.in/api/v1/emotions/" + this.id;
+   this.httpclient.get<any>(url, {headers})
+   .subscribe((res: any)=>{
+    console.log('checking ', res); 
    })
   }
 
