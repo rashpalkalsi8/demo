@@ -4,6 +4,7 @@ import {FormControl,FormGroup,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FormBuilder } from '@angular/forms';
+import { error } from 'jquery';
 
 @Component({
   selector: 'app-login',
@@ -47,8 +48,8 @@ export class LoginComponent  implements OnInit {
     localStorage.setItem("customerID", res.customerID);
      alert("Login Successfull");
      this.router.navigate(['/home']);
-   },err=>{
-   alert("Please check Username/Password");
+   },error=>{
+   alert(error.message);
  })
   }
 
