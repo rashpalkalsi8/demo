@@ -54,14 +54,19 @@
       <!--Progress Bar--> 
 
     <!--Vision--> 
+    <form action="connect1.php" method="post" [formGroup]="form" (ngSubmit)="goal()">
      <div class="container text-center pt-5 text-gray">
         <h2 class="font-gilroy-bold font-40">Target</h2>
         <p class="vfont-gilroy-light font-22 pt-3">
            Time to get specific! <br>How will you define sucess <br>and by what date do you <br> want to achieve it?
         </p>
         <br><br>
+        <div formArrayName="CustomerGoalQns">
+          <div *ngFor="let user of getCustomerGoalQns.controls;let i=index">
+            <div [formGroupName]="i">
         <p class="vfont-gilroy-light font-22 pt-3">
-            "I'll be so proud of myself <br> when I..."
+          {{user.value.Text}}
+            <!-- "I'll be so proud of myself <br> when I..." -->
          </p>
 
         <div class="col-10 mx-auto textarea-bg p-2">
@@ -70,7 +75,8 @@
             </textarea>
         </div>
 
-       </div>
+       </div></div></div></div></form>
+     
     <!--Vision--> 
 
     <!--Help-->
@@ -95,7 +101,7 @@
         <h5 class="font-22 pt-3 font-gilroy-bold">For Health:</h5>
         <p class="font-22 p-3 font-gilroy-light">I am so happy and grateful now that I am priortizing my health. I love my body. It’s easy for me to eat healthy foods, drink plenty of water, excercise regularly and sleep deeply every night. I feel sexy and strong. I have more  energy and focus. My mind i clearer and my body feels amazing! I am ready to take on more adventures and live a long. active and vibrant life. I look and  feel fantastic!</p>
         <div class="d-grid gap-2 p-3">
-        <button class="btn btn-primary btn-block" routerLink="/goal4">Next</button>
+        <button class="btn btn-primary btn-block" (click)="goal()" >Next</button>
     </div>
       </div>
 

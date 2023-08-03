@@ -218,7 +218,7 @@ export class HomepageComponent {
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
         console.log('checking ', res.mediaFileUrl);
-        this.media = res.mediaFileUrl;
+      return  this.media = res.mediaFileUrl;
       })
   }
 
