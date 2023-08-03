@@ -79,13 +79,14 @@
       <h2 class="font-gilroy-bold font-32 p-4">
         I can do this because I am  
    </h2>
-   <div class="container p-0 coach-bx mb-5">
+   <div class="container p-0  mb-5">
     
-   <div class="list-group-coach active align-items-center font-28 text-pink d-flex align-items-center gap-4 font-gilroy-light">
-     Abundant
-   </div>
+    <label class="container-1 font-gilroy-bold text-black mb-4" *ngFor="let item of hobbiesCategory">{{item.value}}
+      <input type="radio" checked="checked" name="radio" [value]="item.id">
+      <span class="checkmark"></span>
+    </label>
 
-   <div class="list-group-coach  align-items-center font-28 text-pink d-flex align-items-center gap-4 font-gilroy-light">
+   <!-- <div class="list-group-coach  align-items-center font-28 text-pink d-flex align-items-center gap-4 font-gilroy-light">
      Adventurous
    </div>
 
@@ -109,7 +110,7 @@
 
    <div class="list-group-coach  align-items-center font-28 text-pink d-flex align-items-center gap-4 font-gilroy-light">
      Other
-   </div>
+   </div> -->
 
 
  

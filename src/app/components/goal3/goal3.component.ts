@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { da } from 'date-fns/locale';
 
 @Component({
   selector: 'app-goal3',
@@ -21,8 +22,8 @@ export class Goal3Component {
       hobbiesCategoryID: []
     })
 
-    
-    this.addCustomerGoalQns('A66956F0-A415-EE11-9F1C-BB47871D3CF4','"I will be so proud of myself when I..."')
+
+    this.addCustomerGoalQns('A66956F0-A415-EE11-9F1C-BB47871D3CF4', '"I will be so proud of myself when I..."')
 
   }
 
@@ -32,11 +33,13 @@ export class Goal3Component {
   }
 
   ngOninit() {
-
+    var data = localStorage.getItem("customergoal") ?? '';
+    console.log(data);
+    var record = JSON.parse(data);
   }
 
 
-  addCustomerGoalQns(goalId: any,text: any) {
+  addCustomerGoalQns(goalId: any, text: any) {
     const add = this.fb.group({
       customerGoalQnID: [goalId],
       customerGoalQnAns: [],
@@ -50,7 +53,17 @@ export class Goal3Component {
   goal() {
 
     console.log(this.form.value);
-    localStorage.setItem("customergoal", this.form.value);
+    var data = localStorage.getItem("customergoal") ?? '';
+    console.log(data);
+    var record = JSON.parse(data);
+    var newrecord = this.form.value;
+    console.log(newrecord.CustomerGoalQns[0]);
+
+    record.CustomerGoalQns.push(newrecord.CustomerGoalQns[0]);
+
+    console.log(record);
+
+    localStorage.setItem("customergoal", JSON.stringify(record));
     // let token1 = this.getToken()!;
     // let id = this.getId()!;
     // console.log('checking ', this.goalForms.value);

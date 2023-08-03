@@ -26,9 +26,9 @@ export class GoalComponent {
       hobbiesCategoryID: []
     })
 
-    this.addCustomerGoalQns('A36956F0-A415-EE11-9F1C-BB47871D3CF4','“I am so happy and grateful know that...”')
-    this.addCustomerGoalQns('A46956F0-A415-EE11-9F1C-BB47871D3CF4','“Achieving this will help me feel more..”')
-    this.addCustomerGoalQns('A56956F0-A415-EE11-9F1C-BB47871D3CF4','“This shift is important to me because..”')
+    this.addCustomerGoalQns('A36956F0-A415-EE11-9F1C-BB47871D3CF4', '“I am so happy and grateful know that...”')
+    this.addCustomerGoalQns('A46956F0-A415-EE11-9F1C-BB47871D3CF4', '“Achieving this will help me feel more..”')
+    this.addCustomerGoalQns('A56956F0-A415-EE11-9F1C-BB47871D3CF4', '“This shift is important to me because..”')
     // this.addCustomerGoalQns('A66956F0-A415-EE11-9F1C-BB47871D3CF4')
 
   }
@@ -43,7 +43,7 @@ export class GoalComponent {
   }
 
 
-  addCustomerGoalQns(goalId: any,text: any) {
+  addCustomerGoalQns(goalId: any, text: any) {
     const add = this.fb.group({
       customerGoalQnID: [goalId],
       customerGoalQnAns: [],
@@ -99,7 +99,7 @@ export class GoalComponent {
   goal() {
 
     console.log(this.form.value);
-    localStorage.setItem("customergoal", this.form.value);
+    localStorage.setItem("customergoal", JSON.stringify(this.form.value));
     // let token1 = this.getToken()!;
     // let id = this.getId()!;
     // console.log('checking ', this.goalForms.value);
