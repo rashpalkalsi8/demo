@@ -1,468 +1,557 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RSK</title>
-    <meta name="theme-color" content="#c25d84">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.css'><link rel="stylesheet" href="./homepage.component.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="./homepage.component.css"  rel="stylesheet">
-    
-  </head>
-<meta name="theme-color" content="#c25d84">
-  <body style="padding-bottom: 100px;">
-<!--Home Banner-->
-<section class="home-banner">
-</section>
 
-<div class="background-white  user-feel-box">
-  <h1 class="font-28"><strong>Hey {{fullName}}! {{media}}</strong></h1>
-  <!-- (click)="playAudio()" call in image -->
-  
-  <!-- <audio class="player" controls preload="none">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSK</title>
+  <meta name="theme-color" content="#c25d84">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.css'>
+  <link rel="stylesheet" href="./homepage.component.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="./homepage.component.css" rel="stylesheet">
+
+</head>
+<meta name="theme-color" content="#c25d84">
+
+<body style="padding-bottom: 100px;">
+  <!--Home Banner-->
+  <section class="home-banner">
+  </section>
+
+  <div class="background-white  user-feel-box">
+    <h1 class="font-28"><strong>Hey {{fullName}}!</strong></h1>
+    <!-- (click)="playAudio()" call in image -->
+
+    <!-- <audio class="player" controls preload="none">
     <source src="https://docs.google.com/uc?export=open&id=12k2K4jdZTVumyRUag2jQqECb02y0POT4" type="audio/mp3">
 </audio>
   <audio class="player" controls preload="auto">
     <source src="{{emotionresult}}" type="audio/mp3">
 </audio> -->
 
-  <p class="font-22 letter-spacing-2">"I never lose, I either win or learn." - Nelson Mandela</p>
-  <p class="font-gilroy-bold font-22">How are you today?</p>
-  <div class="pt-3"><img class="img wd-100" src="./assets/images/feel2.jpg"></div>
-  <mat-slider min="0" max="10" step="2" showTickMarks discrete [displayWith]="formatLabel">
-    <input matSliderThumb>
-  </mat-slider><br><br>
-  <h1 class="font-28"><strong>For you today!</strong></h1>
-  <mat-tab-group  (selectedTabChange)="tabClicks($event)" (click)="tabClicks($event)">
-    <mat-tab label="Goal">
-      <img class="img wd-100 pointer mt-4" src="./assets/images/m1.png" routerLink="/goal">
+    <p class="font-22 letter-spacing-2">"I never lose, I either win or learn." - Nelson Mandela</p>
+    <p class="font-gilroy-bold font-22">How are you today?</p>
+    <div class="pt-3"><img class="img wd-100" src="./assets/images/feel2.jpg"></div>
+    <mat-slider min="0" max="10" step="2" showTickMarks discrete [displayWith]="formatLabel">
+      <input matSliderThumb>
+    </mat-slider><br><br>
+    <h1 class="font-28"><strong>For you today!</strong></h1>
+    <mat-tab-group (selectedTabChange)="tabClicks($event)" (click)="tabClicks($event)">
+      <mat-tab label="Goal">
+        <img class="img wd-100 pointer mt-4" src="./assets/images/m1.png" routerLink="/goal">
 
-    </mat-tab>
-    <mat-tab label="Resources">
+      </mat-tab>
+      <mat-tab label="Resources">
 
-    
-        
 
-            <div class="slider_best_sellers " style="height: 230px; padding-top: 20px;">
-       <div class="slick-slideshow__slide_bests pointer" style="height: 230px; padding-top: 20px;" >
-        <div class="cat-box-2 background-white mb-2 shadow-sm-1" >         
-          <img  class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
-          <div class="p-2">
-            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-            <div class="font-11 text-green">36 Min Delivery</div>
-            <div class="font-12">Victoria House, San Pedro, USA</div>
-    
+
+
+        <div class="slider_best_sellers " style="height: 230px; padding-top: 20px;">
+          <div class="slick-slideshow__slide_bests pointer" style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white mb-2 shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-2 background-white shadow-sm-1">
+              <img class="wd-100" routerLink="/resources" src="./assets/images/r-1.jpg">
+              <div class="p-2">
+                <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span
+                    class="text-green">4.1</span></div>
+                <div class="font-11 text-green">36 Min Delivery</div>
+                <div class="font-12">Victoria House, San Pedro, USA</div>
+
+              </div>
+            </div>
           </div>
         </div>
-     
-       </div>
-       <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
-         <div class="cat-box-2 background-white shadow-sm-1"  >         
-           <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
-           <div class="p-2">
-            <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-            <div class="font-11 text-green">36 Min Delivery</div>
-            <div class="font-12">Victoria House, San Pedro, USA</div>
-    
-          </div>
-         </div>
-       </div>
-       <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;" >
-        <div class="cat-box-2 background-white shadow-sm-1" >         
-          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
-          <div class="p-2">
-           <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-           <div class="font-11 text-green">36 Min Delivery</div>
-           <div class="font-12">Victoria House, San Pedro, USA</div>
-    
-         </div>
-        </div>
+
+
+
+
+      </mat-tab>
+      <mat-tab label="Community">
+        Community
+
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!--Home Banner-->
+  <!--Schedule Now-->
+  <section class=" m-4 p-3 background-white shadow-lg rounded-md border-radius-10 mb-5">
+    <div class="row">
+      <div class="col-8">
+        <h4>Hey {{fullName}},</h4>
+        <p>Magic Minutes are 60-Second Resets to revitalize & refresh you</p>
+        <button mat-button color="primary" class="schedule bg-pink text-white font-gilroy-bold font-22"
+          routerLink="/schedule">Schedule Now</button>
       </div>
-      <div class="slick-slideshow__slide_bests pointer "  style="height: 230px; padding-top: 20px;">
-        <div class="cat-box-2 background-white shadow-sm-1" >         
-          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
-          <div class="p-2">
-           <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-           <div class="font-11 text-green">36 Min Delivery</div>
-           <div class="font-12">Victoria House, San Pedro, USA</div>
-    
-         </div>
-        </div>
+
+      <div class="col-4 mt-3 pl-0">
+        <img class="img wd-100" src="./assets/images/sch-img.jpg">
       </div>
-      <div class="slick-slideshow__slide_bests pointer "style="height: 230px; padding-top: 20px;" >
-        <div class="cat-box-2 background-white shadow-sm-1"  >         
-          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
-          <div class="p-2">
-           <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-           <div class="font-11 text-green">36 Min Delivery</div>
-           <div class="font-12">Victoria House, San Pedro, USA</div>
-    
-         </div>
-        </div>
-      </div>
-      <div class="slick-slideshow__slide_bests pointer " style="height: 230px; padding-top: 20px;">
-        <div class="cat-box-2 background-white shadow-sm-1"  >         
-          <img class="wd-100" routerLink="/resources"  src="./assets/images/r-1.jpg">
-          <div class="p-2">
-           <div class="font-gilroy-bold font-14 d-flex justify-content-between"><span>Wealth</span><span class="text-green">4.1</span></div>
-           <div class="font-11 text-green">36 Min Delivery</div>
-           <div class="font-12">Victoria House, San Pedro, USA</div>
-    
-         </div>
-        </div>
-      </div>
-     </div>
-               
 
-
-
-    </mat-tab>
-    <mat-tab label="Community">
-      Community
-
-    </mat-tab>
-  </mat-tab-group>
-</div>
-
-<!--Home Banner-->
-<!--Schedule Now-->
-<section class=" m-4 p-3 background-white shadow-lg rounded-md border-radius-10 mb-5">
-  <div class="row">
-    <div class="col-8">
-      <h4>Hey {{fullName}},</h4>
-      <p>Magic Minutes are 60-Second Resets to revitalize & refresh you</p>
-      <button mat-button color="primary" class="schedule bg-pink text-white font-gilroy-bold font-22" routerLink="/schedule">Schedule Now</button>
     </div>
 
-    <div class="col-4 mt-3 pl-0">
-      <img class="img wd-100" src="./assets/images/sch-img.jpg">
-    </div>
-
-  </div>
-
-</section>
-<!--Schedule Now-->
-<!--Upgrade Plan-->
-<section class="pointer upgrade-plan p-5 mt-5" routerLink="/subscription">
-</section>
-<!--Upgrade Plan-->
-
-<!--Category-->
-<section class="container mt-2 p-3 pr-0">
-  <div class="d-flex justify-content-between mb-2">
-    <h2 class="font-gilroy-bold font-28">Resourse Library</h2>
-    <span class="text-gray font-gilroy-light mt-2" routerLink="/resources">
-      See all
-    </span>
-  </div>
-
-
-
-
-
-  <div class="row">
-    <div class="slider">
-      <div class="slick-slideshow__slide">
-        <div class="cat-box bg-blue mr-5 pointer" routerLink="/resources">
-          <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png" >
-
-          <h5 class="text-white font-14 mt-3">Happiness</h5>
-        </div>
-
-      </div>
-      <div class="slick-slideshow__slide " >
-        <div class="cat-box bg-purple mr-5 pointer" routerLink="/resources">
-         
-          <img class="hm-ct-2" width="60" src="./assets/images/hm-c-2.png" >
-        
-          <h5 class="text-white font-14 mt-3">Career</h5>
-        </div>
-      </div>
-      <div class="slick-slideshow__slide " >
-        <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
-          <img class="hm-ct-3" width="60" src="./assets/images/hm-c-3.png" >
-          <h5 class="text-white font-14 mt-3">Relatioship</h5>
-        </div>
-      </div>
-      <div class="slick-slideshow__slide " >
-        <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
-          <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png" >
-          <h5 class="text-white font-14 mt-3">Happiness</h5>
-        </div>
-      </div>
-      <div class="slick-slideshow__slide " >
-        <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
-          <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png" >
-          <h5 class="text-white font-14 mt-3">Happiness</h5>
-        </div>
-      </div>
-      <div class="slick-slideshow__slide " >
-        <div class="cat-box bg-pink  pointer" routerLink="/resources">
-        <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png" >
-          <h5 class="text-white font-14 mt-3">Happiness</h5>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-</section>
-<!--Category-->
-
-<!--Main Category-->
-<section class="container mt-2 p-4 pr-0">
-  <div class="d-flex justify-content-between mb-2">
-    <!-- <span class="">
-       See all
-     </span>  -->
-  </div>
-
-  <!--Tabs-->
-
-  <mat-tab-group  (selectedTabChange)="tabClick($event)" (click)="tabClick($event)">
+  </section>
+  <!--Schedule Now-->
+  <!--Upgrade Plan-->
+  <section class="pointer upgrade-plan p-5 mt-5" routerLink="/subscription">
+  </section>
+  <!--Upgrade Plan-->
+  <!-- <mat-tab-group (selectedTabChange)="tabClick($event)" (click)="tabClick($event)"> -->
+  <!-- <mat-tab-group (selectedTabChange)="tabClick($event)" (click)="tabClick($event)">
     <mat-tab label="Popular">
       <div class="slider">
-        <div class="slick-slideshow__slide" style="height: 230px; padding-top: 20px;">
+        <div class="slick-slideshow__slide" style="height: 230px; padding-top: 20px;" *ngFor="let item of media">
           <div class="cat-box-1 background-white shadow-lg ">
-            
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources" >
-            <h5 class=" font-14 mt-3">Happy Love</h5>
+            <img class="hm-ct-3" width="60" src="./assets/images/hm-c-3.png">
+            <audio controls poster="./assets/images/hm-ct-1.png">
+              <source [src]="item.mediaFileUrl" type="audio/ogg">
+            </audio>
+            <h5 class=" font-14 mt-3"> {{item.goalCategory}}
+            </h5>
           </div>
 
         </div>
-        <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide" style="height: 230px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
+
       </div>
     </mat-tab>
-    <mat-tab label="Best Seller">
-      <div class="slider_best_seller">
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
+  </mat-tab-group> -->
+  <!-- <mat-tab label="Popular">
+      <div class="slider">
+        <div class="slick-slideshow__slide" style="height: 230px; padding-top: 20px;" *ngFor="let item of media">
+          <video controls poster="./assets/images/hm-ct-1.png">
+            <source [src]="item.mediaFileUrl" type="audio/ogg">
+            {{item.goalCategory}}
+          </video>
+
         </div>
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
+
       </div>
-    </mat-tab>
-    <mat-tab label="Newest">
-      <div class="slider_newest_seller">
-        <div class="slick-slideshow__slide_newest" style="height: 270px; padding-top: 20px;">
+    </mat-tab> -->
+  <!-- </mat-tab-group> -->
+
+
+
+  <!--Category-->
+  <section class="container mt-2 p-3 pr-0">
+    <div class="d-flex justify-content-between mb-2">
+      <h2 class="font-gilroy-bold font-28">Resourse Library</h2>
+      <span class="text-gray font-gilroy-light mt-2" routerLink="/resources">
+        See all
+      </span>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <!-- <div class="slider">
+        <div class="slick-slideshow__slide">
+          <div class="cat-box bg-blue mr-5 pointer" routerLink="/resources">
+            <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png">
+
+            <h5 class="text-white font-14 mt-3">Happiness</h5>
+          </div>
+
+        </div>
+        <div class="slick-slideshow__slide ">
+          <div class="cat-box bg-purple mr-5 pointer" routerLink="/resources">
+
+            <img class="hm-ct-2" width="60" src="./assets/images/hm-c-2.png">
+
+            <h5 class="text-white font-14 mt-3">Career</h5>
+          </div>
+        </div>
+        <div class="slick-slideshow__slide ">
+          <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
+            <img class="hm-ct-3" width="60" src="./assets/images/hm-c-3.png">
+            <h5 class="text-white font-14 mt-3">Relatioship</h5>
+          </div>
+        </div>
+        <div class="slick-slideshow__slide ">
+          <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
+            <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png">
+            <h5 class="text-white font-14 mt-3">Happiness</h5>
+          </div>
+        </div>
+        <div class="slick-slideshow__slide ">
+          <div class="cat-box bg-pink mr-5 pointer" routerLink="/resources">
+            <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png">
+            <h5 class="text-white font-14 mt-3">Happiness</h5>
+          </div>
+        </div>
+        <div class="slick-slideshow__slide ">
+          <div class="cat-box bg-pink  pointer" routerLink="/resources">
+            <img class="hm-ct-1" width="60" src="./assets/images/hm-c-1.png">
+            <h5 class="text-white font-14 mt-3">Happiness</h5>
+          </div>
+        </div>
+      </div> -->
+      <div class="slider">
+        <div class="slick-slideshow__slide" style="height: 330px; padding-top: 20px;" *ngFor="let item of media">
           <div class="cat-box-1 background-white shadow-lg ">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happy Love</h5>
+            <!-- <img class="hm-ct-3" width="60" src="./assets/images/hm-c-3.png"> -->
+            <img class="wd-100" src="./assets/images/hm-ct-1.png">
+            <audio class="audiowidth" controls poster="./assets/images/hm-ct-1.png">
+              <source [src]="item.mediaFileUrl" type="audio/ogg">
+            </audio>
+            <h5 class=" font-14 mt-3"> {{item.goalCategory}}
+            </h5>
           </div>
 
         </div>
-        <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
+
       </div>
-    </mat-tab>
-    <mat-tab label="Comming Soon">
-      <div class="slider_comming_soon">
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px; padding-top: 20px;">
-          <div class="cat-box-1 background-white shadow-lg ">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happy Love</h5>
-          </div>
 
-        </div>
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top:20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">I'm Pregnant</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-        <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
-          <div class="cat-box-1 background-white shadow-lg">
-            <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
-            <h5 class=" font-14 mt-3">Happiness</h5>
-          </div>
-        </div>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+    </div>
 
 
 
-</section>
-<!--Main Category-->
-<!--Go Deeper-->
-<section class="container p-3">
-  <div class="d-flex justify-content-between mb-2">
-    <h2 class="font-gilroy-bold font-28">Explore</h2>
-    <!-- <span class="text-gray font-gilroy-light mt-2">
+  </section>
+  <!--Category-->
+
+  <!--Main Category-->
+  <section class="container mt-2 p-4 pr-0">
+    <div class="d-flex justify-content-between mb-2">
+      <!-- <span class="">
+       See all
+     </span>  -->
+    </div>
+
+    <!--Tabs-->
+
+    <mat-tab-group (selectedTabChange)="tabClick($event)" (click)="tabClick($event)">
+      <mat-tab label="Popular">
+        <div class="slider">
+          <div class="slick-slideshow__slide" style="height: 230px; padding-top: 20px;">
+            <div class="cat-box-1 background-white shadow-lg ">
+
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happy Love</h5>
+            </div>
+
+          </div>
+          <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide" style="height: 230px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide" style="height: 230px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Best Seller">
+        <div class="slider_best_seller">
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_best" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Newest">
+        <div class="slider_newest_seller">
+          <div class="slick-slideshow__slide_newest" style="height: 270px; padding-top: 20px;">
+            <div class="cat-box-1 background-white shadow-lg ">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happy Love</h5>
+            </div>
+
+          </div>
+          <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_newest" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Comming Soon">
+        <div class="slider_comming_soon">
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px; padding-top: 20px;">
+            <div class="cat-box-1 background-white shadow-lg ">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happy Love</h5>
+            </div>
+
+          </div>
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top:20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">I'm Pregnant</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+          <div class="slick-slideshow__slide_comming_soon" style="height: 270px;padding-top: 20px">
+            <div class="cat-box-1 background-white shadow-lg">
+              <img class="wd-100" src="./assets/images/hm-ct-1.png" routerLink="/resources">
+              <h5 class=" font-14 mt-3">Happiness</h5>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+
+
+  </section>
+  <!--Main Category-->
+  <!--Go Deeper-->
+  <section class="container p-3">
+    <div class="d-flex justify-content-between mb-2">
+      <h2 class="font-gilroy-bold font-28">Explore</h2>
+      <!-- <span class="text-gray font-gilroy-light mt-2">
       See all
     </span> -->
-  </div>
-
-
-
-
-  <div class="row">
-    <div class="col-6 pointer mb-3" routerLink="/book-a-session">
-      <div class="bg-pink p-2 border-radius-10">
-        <img width="35" src="./assets/images/b-s.png"> <span class="text-white ml-2 font-16 font-gilroy-bold">Book Session</span>
-      </div>
-    </div>
-    <div class="col-6 pl-0 pointer" routerLink="/journal">
-      <div class="bg-yellow p-2 border-radius-10">
-        <img width="35" src="./assets/images/b-s.png"> <span class="text-black ml-2 font-16 font-gilroy-bold">Journal Entry</span>
-      </div>
     </div>
 
-  </div>
 
-  <div class="row">
-    <div class="col-6 pointer" routerLink="/connect2">
-      <div class="bg-yellow p-2 border-radius-10">
-        <img width="35" src="./assets/images/b-s.png"><span class="text-black ml-2 font-16 font-gilroy-bold">Connect</span>
 
+
+    <div class="row">
+      <div class="col-6 pointer mb-3" routerLink="/book-a-session">
+        <div class="bg-pink p-2 border-radius-10">
+          <img width="35" src="./assets/images/b-s.png"> <span class="text-white ml-2 font-16 font-gilroy-bold">Book
+            Session</span>
+        </div>
       </div>
-    </div>
-    <div class="col-6 pl-0 pointer" routerLink="/self-assessment">
-      <div class="bg-pink p-2 border-radius-10">
-        <img width="35" src="./assets/images/b-s.png"> <span class="text-white ml-2 font-16 font-gilroy-bold">Self Assessment</span>
-
+      <div class="col-6 pl-0 pointer" routerLink="/journal">
+        <div class="bg-yellow p-2 border-radius-10">
+          <img width="35" src="./assets/images/b-s.png"> <span class="text-black ml-2 font-16 font-gilroy-bold">Journal
+            Entry</span>
+        </div>
       </div>
+
     </div>
 
-  </div>
+    <div class="row">
+      <div class="col-6 pointer" routerLink="/connect2">
+        <div class="bg-yellow p-2 border-radius-10">
+          <img width="35" src="./assets/images/b-s.png"><span
+            class="text-black ml-2 font-16 font-gilroy-bold">Connect</span>
 
-</section>
-<!--Go Deeper-->
-<!--Tab Bar-->
-<nav class="z-3 nav position-fixed bottom-0 tab-bar wd-100 ">
-  <a href="login" class="nav__link active">
-    <i class="material-icons nav__icon">home</i>
-  </a>
-  <a href="signup" class="nav__link  ">
-    <i class="material-icons nav__icon">travel_explore</i>
-  </a>
-  <a href="progress" class="nav__link  ">
-    <i class="material-icons nav__icon">timeline</i>
-  </a>
-  <a href="resources" class="nav__link ">
-    <i class="material-icons nav__icon">person</i>
-  </a>
-  <a href="settings" class="nav__link ">
-    <i class="material-icons nav__icon">settings</i>
-  </a>
-</nav>
-<!--Tab Bar-->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.js'></script>
-<script  src="../../../assets/Js/script.js"></script>
-</body></html>
+        </div>
+      </div>
+      <div class="col-6 pl-0 pointer" routerLink="/self-assessment">
+        <div class="bg-pink p-2 border-radius-10">
+          <img width="35" src="./assets/images/b-s.png"> <span class="text-white ml-2 font-16 font-gilroy-bold">Self
+            Assessment</span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!--Go Deeper-->
+  <!--Tab Bar-->
+  <nav class="z-3 nav position-fixed bottom-0 tab-bar wd-100 ">
+    <a href="login" class="nav__link active">
+      <i class="material-icons nav__icon">home</i>
+    </a>
+    <a href="signup" class="nav__link  ">
+      <i class="material-icons nav__icon">travel_explore</i>
+    </a>
+    <a href="progress" class="nav__link  ">
+      <i class="material-icons nav__icon">timeline</i>
+    </a>
+    <a href="resources" class="nav__link ">
+      <i class="material-icons nav__icon">person</i>
+    </a>
+    <a href="settings" class="nav__link ">
+      <i class="material-icons nav__icon">settings</i>
+    </a>
+  </nav>
+  <!--Tab Bar-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.js'></script>
+  <script src="../../../assets/Js/script.js"></script>
+</body>
+
+</html>

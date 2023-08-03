@@ -3,6 +3,12 @@
 }
 .pointer       { cursor: pointer; }
 
+.audiowidth { 
+    margin-top: 10px;
+    margin-left: -7px;
+    width: 130px; 
+}
+
 
 mat-slider {
     margin-left:4%;

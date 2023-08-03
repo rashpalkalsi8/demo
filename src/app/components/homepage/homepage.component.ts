@@ -25,7 +25,7 @@ export class HomepageComponent {
   }
 
   formatLabel(value: number): string {
-    
+
     if (value <= 0 || value <= 1) {
       this.description = 'angry';
       this.code = value;
@@ -80,7 +80,7 @@ export class HomepageComponent {
   public description: any;
   public id1: any;
   public emotionresult: any;
-  public media: any;
+  public media: any[] = [];
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient: HttpClient) {
 
@@ -208,7 +208,7 @@ export class HomepageComponent {
     this.audio.pause();
   }
 
-  mediabycat(){
+  mediabycat() {
     let api = 'f094fdf9-5718-4858-aa72-64136530c582';
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -217,8 +217,8 @@ export class HomepageComponent {
     let url = "https://digitalstories.co.in/api/v1/media-files";
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
-        console.log('checking ', res.mediaFileUrl);
-      return  this.media = res.mediaFileUrl;
+        console.log('checking ', res[0].mediaFileUrl);
+        return this.media = res;
       })
   }
 
