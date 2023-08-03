@@ -82,7 +82,7 @@
    <div class="container p-0  mb-5">
     
     <label class="container-1 font-gilroy-bold text-black mb-4" *ngFor="let item of hobbiesCategory">{{item.value}}
-      <input type="radio" checked="checked" name="radio" [value]="item.id">
+      <input type="radio"  checked="checked" name="radio" [value]="item.id">
       <span class="checkmark"></span>
     </label>
 
@@ -140,7 +140,7 @@
    
    <div class="text-center pt-5">
      <div class="d-grid gap-2 p-3">
-     <button class="btn btn-primary btn-block" routerLink="/progress">Submit</button>
+     <button class="btn btn-primary btn-block" (click)="goal()">Submit</button>
  </div>
    </div>
 

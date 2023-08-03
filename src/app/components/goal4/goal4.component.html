@@ -90,7 +90,7 @@
     <div class="row mt-4">
       <div class="col-12 gap-2 pad-left">
         <label class="container-1 font-gilroy-bold text-black mb-4" *ngFor="let item of goalCategory">{{item.value}}
-          <input type="radio" checked="checked" name="radio" [value]="item.id">
+          <input type="radio" checked="checked" name="radio" [value]="item.id" (change)="categoryChange($event)">
           <span class="checkmark"></span>
         </label>
 
@@ -207,7 +207,7 @@
 
 
   <div class="d-grid gap-2 p-3">
-    <button class="btn btn-primary btn-block" routerLink="/goal2">Next</button>
+    <button class="btn btn-primary btn-block" (click)="goal()">Next</button>
   </div>
 
 
