@@ -29,8 +29,8 @@ export class BookASessionComponent {
     let url = "https://digitalstories.co.in/api/v1/mentors"
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
+        localStorage.setItem("id", res.id);
         console.log(res);
-        this.mname = res.name;
         return this.mname = res;
       })
   }
