@@ -1,0 +1,32 @@
+<div class="login">
+    <div class="outer">
+    <div class="container"> 
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-m-7 offset-1g-4 offset-md-3">
+                <div class="panel border bg-white animate__animated animate__fadeIn"> 
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold animate__fadeInDown">Verify OTP</h3> 
+                    </div>
+                    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+                            <div class="panel-body p-3">
+                            <form  (ngSubmit)="dologin()" [formGroup]= "loginForm" class="animate__animated animate__fadeIn"> 
+                                <div class="form-group pt-3">
+                                    <span class="error" *ngIf= 'customerOTP!.invalid && customerOTP!.touched'>*Required</span>
+                                    <div class="input-field">
+                                    <span class="fa fa-envelope p-2"></span> 
+                                    <input type="text" formControlName= "customerOTP" class="{'is-invalid'}" placeholder="OTP" name="customerOTP">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block mt-4 w-100 animate__animated animate__fadeIn">Submit</button>
+                            </form>
+                            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

@@ -49,6 +49,9 @@ import { Schedule2Component } from './components/schedule2/schedule2.component';
 import { CommunityComponent } from './components/community/community.component';
 import { Connect2Component } from './components/connect2/connect2.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { OtpComponent } from './components/otp/otp.component';
+import { NewPasswordComponent } from './components/new-password/new-password.component';
 
 
 @NgModule({
@@ -79,7 +82,10 @@ import { HttpClientModule } from '@angular/common/http';
     JournalEntryComponent,
     Schedule2Component,
     CommunityComponent,
-    Connect2Component
+    Connect2Component,
+    ForgetPasswordComponent,
+    OtpComponent,
+    NewPasswordComponent
   ],
   imports: [
     BrowserModule,

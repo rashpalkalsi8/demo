@@ -6,6 +6,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { UserDataService } from 'src/app/services/user-data.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import startOfISOWeek from 'date-fns/startOfISOWeek';
+import { event } from 'jquery';
 
 declare function BestSellerSlider(): any;
 declare function BestSellerSliders(): any;
@@ -24,6 +25,22 @@ export class HomepageComponent {
     return id;
   }
 
+  emotions() {
+    let api = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let eid = this.id1;
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-api-key': api,
+      'media-files': 'audio',
+    });
+    let url = "https://digitalstories.co.in/api/v1/emotions/" + eid + "/media-files";
+    this.httpclient.get<any>(url, { headers })
+      .subscribe((res: any) => {
+        console.log('checking ', res[0].mediaFileUrl);
+        this.emotionresult = res[0].mediaFileUrl;
+      })
+  }
+
   formatLabel(value: number): string {
 
     if (value <= 0 || value <= 1) {
@@ -37,6 +54,7 @@ export class HomepageComponent {
     else if (value <= 2 || value <= 3) {
       this.description = 'sad';
       this.id1 = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
+      this.emotions();
       return this.code + this.description + this.id1;
     }
     else if (value <= 4 || value <= 5) {
@@ -97,6 +115,7 @@ export class HomepageComponent {
   }
 
 
+ 
 
   ngOnInit() {
     this.scriptLoader.load(
@@ -117,6 +136,7 @@ export class HomepageComponent {
   }
   tabClicks(tab: any) {
     BestSellerSliders();
+    BestSellerSlider();
     NewestSellerSlider();
     CommingSoonSlider();
   }
@@ -170,21 +190,6 @@ export class HomepageComponent {
       })
   }
 
-  public emotions() {
-    let api = 'f094fdf9-5718-4858-aa72-64136530c582';
-    let eid = this.id1;
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'x-api-key': api,
-      'media-files': 'audio',
-    });
-    let url = "https://digitalstories.co.in/api/v1/emotions/" + eid + "/media-files";
-    this.httpclient.get<any>(url, { headers })
-      .subscribe((res: any) => {
-        console.log('checking ', res[0].mediaFileUrl);
-        this.emotionresult = res[0].mediaFileUrl;
-      })
-  }
   audio = new Audio();
 
   loadaudio() {

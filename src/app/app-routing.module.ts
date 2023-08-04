@@ -26,11 +26,23 @@ import { JournalEntryComponent } from './components/journal-entry/journal-entry.
 import { Schedule2Component } from './components/schedule2/schedule2.component';
 import { CommunityComponent } from './components/community/community.component';
 import { Connect2Component } from './components/connect2/connect2.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { OtpComponent } from './components/otp/otp.component';
+import { NewPasswordComponent } from './components/new-password/new-password.component';
 
 
 const routes: Routes = [
   {
     path: '', component: LoginComponent
+  },
+  {
+    path: 'new-password', component: NewPasswordComponent
+  },
+  {
+    path: 'otp', component: OtpComponent
+  },
+  {
+    path: 'forget-password', component: ForgetPasswordComponent
   },
   {
     path: 'login', component: LoginComponent
