@@ -29,11 +29,15 @@ import { Connect2Component } from './components/connect2/connect2.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { NewPasswordComponent } from './components/new-password/new-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
 const routes: Routes = [
   {
     path: '', component: LoginComponent
+  },
+  {
+    path: 'reset-password', component: ResetPasswordComponent
   },
   {
     path: 'new-password', component: NewPasswordComponent

@@ -52,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { OtpComponent } from './components/otp/otp.component';
 import { NewPasswordComponent } from './components/new-password/new-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { NewPasswordComponent } from './components/new-password/new-password.com
     Connect2Component,
     ForgetPasswordComponent,
     OtpComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
