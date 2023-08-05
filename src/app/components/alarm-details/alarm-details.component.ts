@@ -1,22 +1,29 @@
+import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-subscription',
-  templateUrl: './subscription.component.html',
-  styleUrls: ['./subscription.component.css']
+  selector: 'app-alarm-details',
+  templateUrl: './alarm-details.component.html',
+  styleUrls: ['./alarm-details.component.css']
 })
-export class SubscriptionComponent implements OnInit {
+export class AlarmDetailsComponent {
 
-  packages: any[] = [];
-  packageId: any;
+
+
   constructor(private httpclient: HttpClient, private router: Router) {
+
+
   }
 
   ngOnInit(): void {
-    this.getpackages();
+
+    this.getalaram();
   }
+
+  public alaram: any[] = [];
+
 
   storeToken(tokenValue: string, customerID: string) {
     localStorage.setItem('customerToken', tokenValue)
@@ -31,26 +38,25 @@ export class SubscriptionComponent implements OnInit {
   }
 
 
-  packageSelection(id: any) {
-    this.packageId = id;
 
-  }
-  buy(){
-    localStorage.setItem('PackageSelection', this.packageId);
-    this.router.navigateByUrl('/premium-subscription')
-  }
-
-  getpackages() {
+  getalaram() {
     let api = 'f094fdf9-5718-4858-aa72-64136530c582';
+    let id = this.getId()!;
+    let tkn = this.getToken()!;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'x-api-key': api
+      'x-api-key': api,
+      'x-user-token': tkn,
+      'customerID': id
     });
-    let url = "https://digitalstories.co.in/api/v1/packages"
+    let url = 'https://digitalstories.co.in/api/v1/customers/' + id + "/alarm-schedule"
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
-        return this.packages = res;
+        return this.alaram = res;
       })
   }
+
+
+
 
 }

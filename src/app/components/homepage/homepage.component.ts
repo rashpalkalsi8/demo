@@ -36,9 +36,33 @@ export class HomepageComponent {
     let url = "https://digitalstories.co.in/api/v1/emotions/" + eid + "/media-files";
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
-        console.log('checking ', res[0].mediaFileUrl);
-        this.emotionresult = res[0].mediaFileUrl;
+        console.log('checking ', res);
+        this.emotionresult = res;
       })
+  }
+  slidderChange(event: any) {
+    
+    var value = event.target.value;
+    if (value <= 0 || value <= 1) {
+      this.id1 = 'E0DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+    else if (value <= 2 || value <= 3) {
+      this.id1 = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+    else if (value <= 4 || value <= 5) {
+      this.id1 = 'E2DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+    else if (value <= 6 || value <= 7) {
+      this.id1 = 'E3DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+    else if (value <= 8 || value <= 9) {
+      this.id1 = 'E4DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+    else if (value <= 10) {
+      this.id1 = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
+    }
+
+    this.emotions();
   }
 
   formatLabel(value: number): string {
@@ -49,45 +73,43 @@ export class HomepageComponent {
 
       this.id1 = 'E0DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id1;
+      return this.description;
     }
     else if (value <= 2 || value <= 3) {
       this.description = 'sad';
       this.id1 = 'E1DAD613-FB13-EE11-9F1B-80B136B022C7';
-      this.emotions();
-      return this.code + this.description + this.id1;
+      return this.description;
     }
     else if (value <= 4 || value <= 5) {
       this.description = 'normal';
 
       this.id1 = 'E2DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id1;
+      return this.description;
     }
     else if (value <= 6 || value <= 7) {
       this.description = 'better';
 
       this.id1 = 'E3DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id1;
+      return this.description;
     }
     else if (value <= 8 || value <= 9) {
       this.description = 'happy';
 
       this.id1 = 'E4DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id1;
+      return this.description;
     }
     else if (value <= 10) {
       this.description = 'best';
 
       this.id1 = 'E5DAD613-FB13-EE11-9F1B-80B136B022C7';
 
-      return this.code + this.description + this.id1;
+      return this.description;
     }
 
 
-    this.emotions()
     return `${value}`;
   }
 
@@ -97,7 +119,7 @@ export class HomepageComponent {
   public code: any;
   public description: any;
   public id1: any;
-  public emotionresult: any;
+  public emotionresult: any[] = [];
   public media: any[] = [];
 
   constructor(private scriptLoader: ScriptLoaderService, private httpclient: HttpClient) {
@@ -115,7 +137,7 @@ export class HomepageComponent {
   }
 
 
- 
+
 
   ngOnInit() {
     this.scriptLoader.load(
@@ -186,7 +208,10 @@ export class HomepageComponent {
     let url = "https://digitalstories.co.in/api/v1/customers/" + id
     this.httpclient.get<any>(url, { headers })
       .subscribe((res: any) => {
+        console.log(res);
+        localStorage.setItem('CustomerInfo',JSON.stringify(res));
         return this.fullName = res.firstName;
+
       })
   }
 

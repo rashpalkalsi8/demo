@@ -30,11 +30,23 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { OtpComponent } from './components/otp/otp.component';
 import { NewPasswordComponent } from './components/new-password/new-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { MentorAvailabilityComponent } from './components/mentor-availability/mentor-availability.component';
+import { BookMentorComponent } from './components/book-mentor/book-mentor.component';
+import { AlarmDetailsComponent } from './components/alarm-details/alarm-details.component';
 
 
 const routes: Routes = [
   {
     path: '', component: LoginComponent
+  },
+  {
+    path: 'alarm-details', component: AlarmDetailsComponent
+  },
+  {
+    path: 'book-mentor', component: BookMentorComponent
+  },
+  {
+    path: 'mentor-availability', component: MentorAvailabilityComponent
   },
   {
     path: 'reset-password', component: ResetPasswordComponent

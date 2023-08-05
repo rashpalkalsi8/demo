@@ -1,0 +1,50 @@
+
+     <!--Tool Bar-->
+    
+     
+     <mat-toolbar color="primary" class="position-absolute">
+        <button mat-icon-button class="tool-arow" aria-label="Example icon-button with arrow_back icon" routerLink="/">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <span class="example-spacer"><span class="font-gilroy-bold">Book a Session</span></span>        
+      </mat-toolbar>
+    
+    
+      <!--Tool Bar--> 
+      
+     <!--Video-->
+     <div class="">
+
+       <!-- <img class="img wd-100" src="./assets/images/video-thumb.jpg"> -->
+        <video class="wd-100" controls poster="./assets/images/video-thumb.jpg">
+          <source src="./assets/videos/5 minute Meditation Music for Yoga, Meditation, Massage, Relaxation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+
+    </div><br><br>
+
+    <p class="text-pink text-center p-4 font-gilroy-bold bas">
+        Please pick a date to check mentor availability
+     </p><br>
+
+     <div class="container p-0 coach-bx mb-3 pt-4 mt-5 pb-5">
+        <mat-form-field class="center">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+              <input matStartDate formControlName="start" placeholder="Start date">
+              <input matEndDate formControlName="end" placeholder="End date">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          
+            <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+            <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+          </mat-form-field>
+          
+          <!-- <p>Selected range: {{range.value | json}}</p> -->
+          </div>
+  
+  
+  <div class="text-center mt-2"><button class="btn btn-primary btn-block" (click)="dologin1()"  >Check availability</button>
+  </div>

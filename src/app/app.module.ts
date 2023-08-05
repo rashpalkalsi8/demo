@@ -53,6 +53,11 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { OtpComponent } from './components/otp/otp.component';
 import { NewPasswordComponent } from './components/new-password/new-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { MentorAvailabilityComponent } from './components/mentor-availability/mentor-availability.component';
+import { BookMentorComponent } from './components/book-mentor/book-mentor.component';
+import {MatSelectModule} from '@angular/material/select';
+import { AlarmDetailsComponent } from './components/alarm-details/alarm-details.component';
+
 
 
 @NgModule({
@@ -87,7 +92,10 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     ForgetPasswordComponent,
     OtpComponent,
     NewPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    MentorAvailabilityComponent,
+    BookMentorComponent,
+    AlarmDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -108,6 +116,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatButtonModule,
     MatCheckboxModule,
     HttpClientModule,
+    MatSelectModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

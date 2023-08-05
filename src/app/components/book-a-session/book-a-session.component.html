@@ -47,7 +47,7 @@
 
        <div class="list-group-coach  align-items-center font-24 text-pink d-flex align-items-center gap-4 font-gilroy-light" *ngFor="let item of mname">
         <img width="40px" src="./assets/images/wealth.png">
-        <input type="radio" checked="checked" name="radio">{{item.mentorCoachingCategory}} -  {{item.name}}
+        <input type="radio"  name="radio" (change)="mentorSelection(item)" >{{item.mentorCoachingCategory}} -  {{item.name}}
           <span class="checkmark"></span>
       </div>
 
@@ -93,5 +93,5 @@
           </p>
 
         <div class="text-center font-28 font-gilroy-light"><s>$297</s>  $49 for 90 minutes</div>
-        <div class="text-center mt-2"><button class="btn btn-primary btn-block" routerLink="/subscription"> [Yes, I am Ready to Soar!]</button>
+        <div class="text-center mt-2"><button class="btn btn-primary btn-block" (click)="doNext()"> [Yes, I am Ready to Soar!]</button>
         </div>
